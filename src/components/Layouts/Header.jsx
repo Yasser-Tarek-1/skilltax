@@ -15,13 +15,13 @@ const Header = ({ onOpenSideHandler }) => {
   return (
     <div className="w-full inset-0 absolute z-10 h-16 sm:h-20 lg:h-32 flex items-center justify-center">
       <div className="container mx-auto px-4">
-        <div className="w-full h-full flex items-center justify-between gap-4 xl:gap-32">
+        <div className="w-full h-full flex items-center justify-between gap-16 xl:gap-32">
           <Link to="/">
             <div>
               <img
                 src={pathname == "/" ? logo : logo_primary}
                 alt="SkillTax"
-                className="w-[150px]"
+                className="w-[120px] lg:w-[150px]"
               />
             </div>
           </Link>
@@ -30,6 +30,7 @@ const Header = ({ onOpenSideHandler }) => {
             <FontAwesomeIcon
               icon={faBars}
               size="xl"
+              // className="h-7"
               color={pathname == "/" ? "#fff " : "#000"}
             />
           </button>

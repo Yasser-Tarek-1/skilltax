@@ -7,6 +7,7 @@ import homeLine from "./home-line.svg";
 import headerMenu from "./header-menu.svg";
 import headerMenu_primary from "./headerMenu_primary.svg";
 import mainLast from "./main_last.svg";
+import lassss from "./Group 1000007368.svg";
 // Features Section
 import cloud from "./cloud.svg";
 import app from "./app.svg";
@@ -50,4 +51,5 @@ export {
   logo_primary,
   headerMenu_primary,
   mainLast,
+  lassss,
 };

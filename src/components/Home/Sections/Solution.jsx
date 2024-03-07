@@ -4,14 +4,12 @@ const array = [{}, {}, {}, {}, {}, {}];
 
 const Solution = () => {
   return (
-    <section id="solution" className="pt-28 md:pt-52">
+    <section id="solution" className="pt-20 sm:pt-28 2xl:pt-52">
       <Head title="حلول مرنة وفعالة لمختلف القطاعات.">
         هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
         النص من مولد النص العربى،
       </Head>
-      <h3 className="text-[20px] lg:text-[28px] xl:text-[35px] font-[dinFontBold]"></h3>
-      <p className="text-secondary text-[15px] md:text-[18px] lg:text-[20px] xl:text-[23px] max-w-[580px]"></p>
-      <div className="w-full flex items-center gap-8 pt-9 lg:pt-14 flex-wrap">
+      <div className="w-full flex items-center gap-8 flex-wrap">
         {/* Solution Card */}
         {array.map((_, idx) => {
           return (

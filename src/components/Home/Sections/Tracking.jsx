@@ -1,25 +1,24 @@
 import { storeOne } from "../../../assets";
+import Button from "../../Layouts/Button";
 
 const Tracking = () => {
   return (
-    <section id="#" className="pt-28 md:pt-52">
+    <section id="#" className="pt-20 sm:pt-28 2xl:pt-52">
       <div className="flex items-center gap-8 lg:gap-32 xl:gap-52 flex-col lg:flex-row">
         <div className="flex-1 custom_shadow">
           <img src={storeOne} alt="tracking" className="max-w-full" />
         </div>
         <div className="flex-1">
-          <h3 className="text-xl lg:text-[28px] xl:text-[35px]">
+          <h3 className="text-xl lg:text-[28px] lg:leading-[40px] xl:text-[35px] xl:leading-[49px]">
             متابعة المخزون بشكل دائم
           </h3>
-          <p className="mb-6 xl:mb-11 mt-4 text-[#14131399] text-[15px] md:text-lg lg:text-xl xl:text-[23px]">
+          <p className="mb-6 mt-1 text-[#14131399] text-sm sm:text-lg xl:text-2xl">
             بالتأكيد! عندما تمكنك أداة متابعة المخزون من مراقبة الأصناف بشكل
             دائم، فإنك تضمن استمرار توفر المواد الضرورية في مخزونك دون انقطاع.
             بالإضافة إلى ذلك، يساعدك تتبع كميات المطبخ قبل النفاذ على تجنب
             المواقف المحرجة أو الأزمات الغذائية
           </p>
-          <button className="w-32 lg:w-36 xl:w-44 h-12 lg:h-12 xl:h-16 bg-primary rounded-full text-white text-sm lg:text-base">
-            قراءة المزيد
-          </button>
+          <Button>قراءة المزيد</Button>
         </div>
       </div>
     </section>
