@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "dinFontRegular";
+  src: url("./fonts/ArbFONTS-DINNextLTArabic-Regular-2.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "dinFontMedium";
+  src: url("./fonts/ArbFONTS-DINNextLTArabic-Medium-2.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "dinFontBold";
+  src: url("./fonts/ArbFONTS-DINNextLTArabic-Bold-2.ttf") format("truetype");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+p,
+span {
+  font-family: "dinFontRegular";
+}
+
+h1,
+h2,
+h4,
+h5,
+h3,
+h6 {
+  font-family: "dinFontMedium";
+}
+
+.custom_shadow {
+  box-shadow: 0px 5px 200px 0px #0000000d;
+}
+
+th,
+td {
+  border: 2px solid #e8e8e8;
+}
