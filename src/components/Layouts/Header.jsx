@@ -1,10 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import {
-  logo,
-  logo_primary,
-  headerMenu,
-  headerMenu_primary,
-} from "../../assets";
+import { logo, logo_primary } from "../../assets";
 import Links from "./Links";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,6 +17,7 @@ const Header = ({ onOpenSideHandler }) => {
                 src={pathname == "/" ? logo : logo_primary}
                 alt="SkillTax"
                 className="w-[120px] lg:w-[150px]"
+                loading="lazy"
               />
             </div>
           </Link>

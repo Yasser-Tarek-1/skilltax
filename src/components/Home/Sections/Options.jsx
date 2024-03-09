@@ -16,7 +16,7 @@ const ALL_OPTIONS = [
   },
   {
     id: 3,
-    title: "المنيو الالكتروني",
+    title: "نظام الولاء",
     text: "هذه الميزة ليست متوفرة حاليا في نظام سكيل تاكس سيتم اضافتها قريبا...",
     icon: gift,
   },
@@ -24,10 +24,9 @@ const ALL_OPTIONS = [
 
 const Options = () => {
   return (
-    <section id="#" className="pt-28 md:pt-52">
+    <section id="#" className="pt-20 sm:pt-28 2xl:pt-52">
       <Head title="المزيد من الحلول">
-        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
-        النص من مولد النص العربى،
+        تمتع بالكثير من الحلول الفعالة المقدمة مع باقات سكيل تاكس أو منفردة
       </Head>
 
       <div className="flex gap-8 items-center mt-[55px] flex-wrap">
@@ -36,14 +35,17 @@ const Options = () => {
           return (
             <div
               key={id}
-              className="w-full sm:w-[470px] h-[560px] border-[1.5px] p-7 shadow border-[#EEEEEE] flex justify-between flex-col items-center rounded-[40px]"
+              className="w-full min-h-[380px] sm:w-[300px] xl:w-[470px] xl:min-h-[560px] border-[1.5px] p-7 shadow border-[#EEEEEE] flex justify-between flex-col items-center rounded-[40px]"
             >
-              <img src={icon} alt="image" className="h-[370px]" />
+              <img
+                src={icon}
+                alt="image"
+                className="h-[260px] xl:h-[370px]"
+                loading="lazy"
+              />
               <div className="w-full">
-                <h4 className="text-[18px] sm:text-[22px] lg:text-[25px]">
-                  {title}
-                </h4>
-                <p className="text-[15px] sm:text-[18] lg:text-[23px] text-secondary">
+                <h4 className="text-lg sm:text-[22px] xl:text-2xl">{title}</h4>
+                <p className="text-sm sm:text-lg xl:text-[22px] text-secondary">
                   {text}
                 </p>
               </div>

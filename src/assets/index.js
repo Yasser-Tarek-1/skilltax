@@ -1,13 +1,7 @@
 import logo from "./logo.svg";
 import logo_primary from "./logo_primary.svg";
-import home from "./home.svg";
-import homeBill from "./home-bill.svg";
-import homeIpad from "./home-ipad.svg";
 import homeLine from "./home-line.svg";
-import headerMenu from "./header-menu.svg";
-import headerMenu_primary from "./headerMenu_primary.svg";
-import mainLast from "./main_last.svg";
-import lassss from "./Group 1000007368.svg";
+import home from "./home.svg";
 // Features Section
 import cloud from "./cloud.svg";
 import app from "./app.svg";
@@ -22,19 +16,19 @@ import iPad from "./iPad.svg";
 import email from "./email.svg";
 import gift from "./gift.svg";
 import qrCode from "./qrCode.svg";
-// Packages Section
-import trueIcon from "./true_icon.svg";
-import trueIcon_main from "./trueIcon_main.svg";
 // footer
 import payments from "./payments.svg";
+//
+import restaurants from "./restaurants.svg";
+import cafes from "./cafes.svg";
+import cafes2 from "./cafes2.svg";
+import from_cars from "./from_cars.svg";
+import for_your_work from "./for_your_work.svg";
+import food_trucks from "./food_trucks.svg";
 
 export {
   logo,
-  home,
-  homeIpad,
-  homeBill,
   homeLine,
-  headerMenu,
   wifi,
   dashboard,
   app,
@@ -45,11 +39,13 @@ export {
   qrCode,
   storeTwo,
   storeOne,
-  trueIcon,
-  trueIcon_main,
   payments,
   logo_primary,
-  headerMenu_primary,
-  mainLast,
-  lassss,
+  home,
+  restaurants,
+  cafes,
+  cafes2,
+  from_cars,
+  for_your_work,
+  food_trucks,
 };

@@ -1,0 +1,296 @@
+[
+  {
+    "id": 1,
+    "title": "باقة بيسك",
+    "price_per_month": 167,
+    "price_per_year": 2000,
+    "advantages": [
+      {
+        "id": 1,
+        "title": "نظام نقاط البيع السّحابي",
+        "include": true
+      },
+      {
+        "id": 2,
+        "title": "تطبيق كاشير Tablet + Ipad",
+        "include": true
+      },
+      {
+        "id": 3,
+        "title": "إدارة المنيو الإلكتروني",
+        "include": true
+      },
+      {
+        "id": 4,
+        "title": "إدارة رسائل SMS",
+        "include": true
+      },
+      {
+        "id": 5,
+        "title": "إدارة المنتجات",
+        "include": true
+      },
+      {
+        "id": 6,
+        "title": "إدارة الإضافات",
+        "include": true
+      },
+      {
+        "id": 7,
+        "title": "إدارة المشتريات",
+        "include": false
+      },
+      {
+        "id": 8,
+        "title": "إدارة المصروفات",
+        "include": true
+      },
+      {
+        "id": 9,
+        "title": "إدارة الخصومات الكوبونات",
+        "include": true
+      },
+      {
+        "id": 10,
+        "title": "إدارة المخزون",
+        "include": false
+      },
+      {
+        "id": 11,
+        "title": "نظام المطبخ",
+        "include": false
+      },
+      {
+        "id": 12,
+        "title": "إدارة المستودع",
+        "include": false
+      },
+      {
+        "id": 13,
+        "title": "إدارة العملاء",
+        "include": true
+      },
+      {
+        "id": 14,
+        "title": "إدارة الموردين",
+        "include": false
+      },
+      {
+        "id": 15,
+        "title": "تقارير المبيعات",
+        "include": true
+      },
+      {
+        "id": 16,
+        "title": "تقرير تكلفة المنتجات",
+        "include": false
+      },
+      {
+        "id": 17,
+        "title": "إصدار التقارير",
+        "include": true
+      },
+      {
+        "id": 18,
+        "title": "نظام الولاء (قريباَ)",
+        "include": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "باقة نمو",
+    "price_per_month": 230,
+    "price_per_year": 2750,
+    "advantages": [
+      {
+        "id": 1,
+        "title": "نظام نقاط البيع السّحابي",
+        "include": true
+      },
+      {
+        "id": 2,
+        "title": "تطبيق كاشير Tablet + Ipad",
+        "include": true
+      },
+      {
+        "id": 3,
+        "title": "إدارة المنيو الإلكتروني",
+        "include": true
+      },
+      {
+        "id": 4,
+        "title": "إدارة رسائل SMS",
+        "include": true
+      },
+      {
+        "id": 5,
+        "title": "إدارة المنتجات",
+        "include": true
+      },
+      {
+        "id": 6,
+        "title": "إدارة الإضافات",
+        "include": true
+      },
+      {
+        "id": 7,
+        "title": "إدارة المشتريات",
+        "include": true
+      },
+      {
+        "id": 8,
+        "title": "إدارة المصروفات",
+        "include": true
+      },
+      {
+        "id": 9,
+        "title": "إدارة الخصومات الكوبونات",
+        "include": true
+      },
+      {
+        "id": 10,
+        "title": "إدارة المخزون",
+        "include": false
+      },
+      {
+        "id": 11,
+        "title": "نظام المطبخ",
+        "include": false
+      },
+      {
+        "id": 12,
+        "title": "إدارة المستودع",
+        "include": true
+      },
+      {
+        "id": 13,
+        "title": "إدارة العملاء",
+        "include": true
+      },
+      {
+        "id": 14,
+        "title": "إدارة الموردين",
+        "include": true
+      },
+      {
+        "id": 15,
+        "title": "تقارير المبيعات",
+        "include": true
+      },
+      {
+        "id": 16,
+        "title": "تقرير تكلفة المنتجات",
+        "include": false
+      },
+      {
+        "id": 17,
+        "title": "إصدار التقارير",
+        "include": true
+      },
+      {
+        "id": 18,
+        "title": "نظام الولاء (قريباَ)",
+        "include": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "باقة بريميوم",
+    "price_per_month": 346,
+    "price_per_year": 4150,
+    "advantages": [
+      {
+        "id": 1,
+        "title": "نظام نقاط البيع السّحابي",
+        "include": true
+      },
+      {
+        "id": 2,
+        "title": "تطبيق كاشير Tablet + Ipad",
+        "include": true
+      },
+      {
+        "id": 3,
+        "title": "إدارة المنيو الإلكتروني",
+        "include": true
+      },
+      {
+        "id": 4,
+        "title": "إدارة رسائل SMS",
+        "include": true
+      },
+      {
+        "id": 5,
+        "title": "إدارة المنتجات",
+        "include": true
+      },
+      {
+        "id": 6,
+        "title": "إدارة الإضافات",
+        "include": true
+      },
+      {
+        "id": 7,
+        "title": "إدارة المشتريات",
+        "include": true
+      },
+      {
+        "id": 8,
+        "title": "إدارة المصروفات",
+        "include": true
+      },
+      {
+        "id": 9,
+        "title": "إدارة الخصومات الكوبونات",
+        "include": true
+      },
+      {
+        "id": 10,
+        "title": "إدارة المخزون",
+        "include": true
+      },
+      {
+        "id": 11,
+        "title": "نظام المطبخ",
+        "include": true
+      },
+      {
+        "id": 12,
+        "title": "إدارة المستودع",
+        "include": true
+      },
+      {
+        "id": 13,
+        "title": "إدارة العملاء",
+        "include": true
+      },
+      {
+        "id": 14,
+        "title": "إدارة الموردين",
+        "include": true
+      },
+      {
+        "id": 15,
+        "title": "تقارير المبيعات",
+        "include": true
+      },
+      {
+        "id": 16,
+        "title": "تقرير تكلفة المنتجات",
+        "include": true
+      },
+      {
+        "id": 17,
+        "title": "إصدار التقارير",
+        "include": true
+      },
+      {
+        "id": 18,
+        "title": "نظام الولاء (قريباَ)",
+        "include": true
+      }
+    ]
+  }
+]

@@ -32,8 +32,8 @@ const Features = () => {
   return (
     <section id="#" className="pt-20 sm:pt-28 2xl:pt-52">
       <Head title="مميزاتنا">
-        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
-        النص من مولد النص العربى،
+        تتميز بالمرونه والقدرة على تلبية كافة إحتياجتك بشكل فعال وفقاً لمتطلباتك
+        ، مما يجعل تجربتك معنا متميزة
       </Head>
       <div className="flex items-start justify-between flex-wrap gap-8 sm:gap-12">
         {FEATURES.map(({ id, icon, h4, p }) => {
@@ -45,10 +45,13 @@ const Features = () => {
               <img
                 src={icon}
                 alt="icon"
-                className="w-[75px] sm:w-[105px] mb-4"
+                className="w-[75px] lg:w-[105px] mb-4"
+                loading="lazy"
               />
-              <h4 className="text-lg sm:text-2xl font-[dinFontMedium]">{h4}</h4>
-              <p className="text-secondary text-sm sm:text-[22px] sm:leading-[30px] font-[dinFontMedium] max-w-full">
+              <h4 className="text-lg sm:text-xl lg:text-2xl font-[dinFontMedium]">
+                {h4}
+              </h4>
+              <p className="text-secondary text-sm sm:text-xl lg:text-[22px] lg:leading-[30px] font-[dinFontMedium] max-w-full">
                 {p}
               </p>
             </div>

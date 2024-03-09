@@ -6,15 +6,16 @@ import PackagesTableSmallScreen from "../components/Packages/PackagesTableSmallS
 
 const Packages = () => {
   useEffect(() => {
-    window.scrollBy({ top: 0 });
+    window.scrollTo(0, 0);
   }, []);
   return (
     <div className="w-full h-full pt-40">
       <div className="container mx-auto px-4">
-        <Head title="الباقات">
-          هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
-          النص من مولد النص العربى،
-        </Head>
+        <div className="w-full mb-10 lg:mb-16 flex justify-center">
+          <h3 className="text-xl sm:text-2xl lg:text-[35px] lg:leading-[50px] font-[dinFontBold]">
+            أسعار الباقات
+          </h3>
+        </div>
         <PackagesTable />
         <PackagesTableSmallScreen />
         <ContactUs />

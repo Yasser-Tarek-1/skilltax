@@ -1,4 +1,4 @@
-import { home, lassss, mainLast, homeLine } from "../../assets";
+import { home, homeLine } from "../../assets";
 
 const Screen = () => {
   return (
@@ -7,16 +7,17 @@ const Screen = () => {
         <div className="w-full h-full flex flex-col gap-12 lg:flex-row items-end justify-between relative ">
           <div className=" h-full lg:pb-32 text-white relative z-10 flex flex-col gap-6 lg:gap-8">
             <h1 className="text-[40px] leading-[52px] sm:text-[60px] sm:leading-[78px] xl:text-[80px] xl:leading-[104px]">
-              <p className="relative">
+              <div className="relative">
                 <span className="relative z-10"> سكيل تاكس خيارك</span>
                 <div className="absolute bottom-[-12px] sm:bottom-[-17px] lg:bottom-[-24px]">
                   <img
                     src={homeLine}
                     alt="home-line"
                     className="w-[150px] sm:w-[200px] lg:w-[275px]"
+                    loading="lazy"
                   />
                 </div>
-              </p>
+              </div>
               <p> الامثل لادارة مبيعاتك</p>
             </h1>
             <p className="text-sm sm:text-xl xl:text-2xl text-[#FFFFFFCC]">
@@ -34,7 +35,7 @@ const Screen = () => {
             </div>
           </div>
           <div className="w-[120%] relative left-0 sm:w-full 2xl:scale-110 2xl:top-[-27px]">
-            <img src={lassss} className="max-w-full" />
+            <img src={home} className="max-w-full" loading="lazy" />
           </div>
         </div>
       </div>

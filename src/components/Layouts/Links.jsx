@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Links = ({ onCloseSideHandler }) => {
   let { pathname } = useLocation();
@@ -17,29 +18,29 @@ const Links = ({ onCloseSideHandler }) => {
         >
           الرئيسية
         </Link>
-        <a
-          onClick={onCloseSideHandler}
-          href="/#solution"
+        <HashLink
+          // onClick={onCloseSideHandler}
+          to="/#solution"
           className=" text-sm lg:text-lg xl:text-[22px] px-4 h-12 flex items-center justify-center"
         >
           حلول سكيل تاكس
-        </a>
-        <a
-          onClick={onCloseSideHandler}
-          href="/#moreSolution"
+        </HashLink>
+        <HashLink
+          // onClick={onCloseSideHandler}
+          to="/#moreSolution"
           className="text-sm lg:text-lg xl:text-[22px] px-4 h-12 flex items-center justify-center"
         >
           حلول خاصة لأعمالك
-        </a>
-        <a
+        </HashLink>
+        <Link
           onClick={onCloseSideHandler}
-          href="/#packages"
+          to="/packages"
           className="text-sm lg:text-lg xl:text-[22px] px-4 h-12 flex items-center justify-center"
         >
           الباقات
-        </a>
+        </Link>
       </div>
-      <a onClick={onCloseSideHandler} href="/#contactUs">
+      <HashLink onClick={onCloseSideHandler} to="#contactUs">
         <button
           className={`${
             pathname == "/" ? "bg-white text-primary" : " bg-primary text-white"
@@ -49,7 +50,7 @@ const Links = ({ onCloseSideHandler }) => {
         >
           تواصل معنا
         </button>
-      </a>
+      </HashLink>
     </>
   );
 };

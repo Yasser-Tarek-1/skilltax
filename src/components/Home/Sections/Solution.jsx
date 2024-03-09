@@ -1,25 +1,40 @@
-import Head from "../../Layouts/Head";
+import {
+  restaurants,
+  cafes,
+  cafes2,
+  from_cars,
+  food_trucks,
+  for_your_work,
+} from "../../../assets";
 
-const array = [{}, {}, {}, {}, {}, {}];
+const flexible_solutions = [
+  { id: 1, title: "المطاعم", img: restaurants },
+  { id: 2, title: "الكفيهات", img: cafes },
+  { id: 3, title: "المقاهي", img: cafes2 },
+  { id: 4, title: "الشراء من السيارة", img: from_cars },
+  { id: 5, title: "عربات الطعام", img: food_trucks },
+  { id: 6, title: "نسخة خاصة لنشاطك", img: for_your_work },
+];
 
 const Solution = () => {
   return (
     <section id="solution" className="pt-20 sm:pt-28 2xl:pt-52">
-      <Head title="حلول مرنة وفعالة لمختلف القطاعات.">
-        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
-        النص من مولد النص العربى،
-      </Head>
+      <div className="w-full mb-10 lg:mb-16 flex justify-center">
+        <h3 className="text-xl sm:text-2xl lg:text-[35px] lg:leading-[50px] font-[dinFontBold]">
+          حلول فعالة لمختلف القطاعات.
+        </h3>
+      </div>
       <div className="w-full flex items-center gap-8 flex-wrap">
         {/* Solution Card */}
-        {array.map((_, idx) => {
+        {flexible_solutions.map(({ id, title, img }) => {
           return (
             <div
-              key={idx}
-              className="flex items-end w-full sm:w-[470px] h-[310px] rounded-[40px] relative overflow-hidden bg-cover"
+              key={id}
+              className="flex items-end w-full h-[210px] sm:w-[310px] lg:h-[310px] lg:w-[470px] rounded-[40px] relative overflow-hidden bg-cover"
               style={{
-                backgroundImage:
-                  "url(https://s3-alpha-sig.figma.com/img/7b08/79ca/10050046329d669946c4117d4e817a1c?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bBi8bc1vP2k4IJNP3rjyiUmV~~M89EengFE213BvtsT5WyH26x~hlvd~jh9rc661A3hdBCjJoU~txSjAEZ9Jgt1HdCXv5YcdTk8hJFdIKI1d5d8k6Ula5wzEpGttnfTy8iiR2r5hLsRHitYpFhkDGXbTuMKEoG1s5fxrRFkXz14oqfFxkx3uruGa-IUJRc9NoE7SXupqb22kWRC2SzDl0ZADcfmmv6JBbIteA-YJ3cRq8Cq9Wg~zp7eeFJLy03zvhewhUuRRy0wo5b-uyikwpgYD9qmBAWAh9y2HaY0-llhjnQtFvxe6usnXZBM3PB6gNdbDso-T90uE9bwORCj~wA__)",
+                backgroundImage: `url(${img})`,
               }}
+              loading="lazy"
             >
               <div
                 className="w-full h-full absolute inset-0 z-[1] bg-cover"
@@ -28,13 +43,10 @@ const Solution = () => {
                     "linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%)",
                 }}
               ></div>
-              <div className="relative z-10 p-6 sm:p-9 text-white">
-                <h4 className="text-[18px] lg:text-[28px] xl:text-[28px] font-[dinFontBold]">
-                  هذا النص هو مثال
+              <div className="relative z-10 p-6 lg:p-9 text-white">
+                <h4 className="text-lg lg:text-[28px] lg:leading-[40px] font-[dinFontBold]">
+                  {title}
                 </h4>
-                <p className="text-[12px] lg:text-[16px]">
-                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة
-                </p>
               </div>
             </div>
           );

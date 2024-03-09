@@ -1,10 +1,10 @@
-const Button = ({ width, children, onClick }) => {
+const Button = ({ width, children, onClick, prim }) => {
   return (
     <button
       onClick={onClick}
-      className={`${
-        width ? width : "w-32 xl:w-44"
-      } h-12 xl:h-16 bg-primary rounded-full text-white text-xs sm:text-sm xl:text-base`}
+      className={`${width ? width : "w-32 xl:w-44"} ${
+        prim ? "text-primary bg-white " : "bg-primary text-white"
+      } h-12 xl:h-16 rounded-full text-xs sm:text-sm xl:text-base font-[dinFontMedium]`}
     >
       {children}
     </button>

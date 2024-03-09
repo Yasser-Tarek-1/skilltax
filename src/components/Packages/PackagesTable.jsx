@@ -1,191 +1,128 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faO, faX, faXmark } from "@fortawesome/free-solid-svg-icons";
+import data from "../../packages_prices.json";
+import { faCheck, faO, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import Button from "../Layouts/Button";
 
-const PackagesTable = () => {
+const Packages2 = () => {
+  const [per, setPer] = useState("per_year");
+
   return (
     <div className="w-full h-full mt-[55px] hidden lg:block">
-      <div className="relative overflow-x-auto rounded-[40px] border-2">
-        <table className="w-full text-sm text-left rtl:text-right  ">
+      <div className="relative overflow-x-auto rounded-[40px] border-2 border-[#E8E8E8] grid grid-cols-4">
+        {/* 1 col */}
+        <div className="border-r-2 border-[#E8E8E8] text-center">
           {/* Head */}
-          <thead className="text-xs text-gray-700 uppercase bg-[#F9F9F9]">
-            <tr className="h-48">
-              <th
-                scope="col"
-                className="text-center text-[30px] font-[dinFontMedium] "
+          <div className="bg-[#F9F9F9] h-40 flex items-center justify-center">
+            <h3 className="text-[35px] leading-[58px] font-[dinFontRegular]">
+              الخصائص
+            </h3>
+          </div>
+          <div className="flex items-center justify-center w-full flex-col">
+            {data[0].advantages.map(({ title, id }) => {
+              return (
+                <div
+                  key={id}
+                  className="w-full flex items-center justify-start h-20 border-b-2 border-[#E8E8E8]"
+                >
+                  <h4 className="text-[#00000099] text-2xl">{title}</h4>
+                </div>
+              );
+            })}
+            {/* per month */}
+            <div className="w-full flex items-center justify-center h-24">
+              <button
+                onClick={() => setPer("per_month")}
+                className={`${
+                  per == "per_month" ? "border-primary" : "border-[#EEEEEEEE]"
+                } h-16 w-[80%] mx-auto rounded-[100px] flex items-center gap-2 px-3 border-[3px]`}
               >
-                الخصائص
-              </th>
-              <th scope="col" className="text-center  ">
-                <h4 className="text-[35px] leading-[50px] font-[dinFontMedium]">
-                  باقة البداية
-                </h4>
-                <p className="text-[20px] leading-[30px] font-[dinFontRegular]">
-                  الباقة المثاليّة للشّركات النّاشئة.
-                </p>
-              </th>
-              <th scope="col" className="text-center ">
-                <h4 className="text-[35px] leading-[50px] font-[dinFontMedium]">
-                  باقة البداية
-                </h4>
-                <p className="text-[20px] leading-[30px] font-[dinFontRegular]">
-                  الباقة المثاليّة للشّركات النّاشئة.
-                </p>
-              </th>
-              <th scope="col" className="text-center">
-                <h4 className="text-[35px] leading-[50px] font-[dinFontMedium]">
-                  باقة البداية
-                </h4>
-                <p className="text-[20px] leading-[30px] font-[dinFontRegular]">
-                  الباقة المثاليّة للشّركات النّاشئة.
-                </p>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* row 1 */}
-            <tr className="bg-white border-b-2 h-20">
-              <th
-                scope="row"
-                className="px-7 text-[#00000099] whitespace-nowrap"
+                <span>
+                  <FontAwesomeIcon
+                    icon={faO}
+                    size="xl"
+                    color={`${per == "per_month" ? "#373873" : "#EEEEEEEE"}`}
+                    className="w-full mx-auto"
+                  />
+                </span>
+                <span className="text-2xl">الدفع شهريا</span>
+              </button>
+            </div>
+            {/* per year */}
+            <div className="w-full flex items-center justify-center h-24 border-b-2 border-[#E8E8E8]">
+              <button
+                onClick={() => setPer("per_year")}
+                className={`${
+                  per == "per_year" ? "border-primary" : "border-[#EEEEEEEE]"
+                } h-16 w-[80%] mx-auto rounded-[100px] flex items-center gap-2 px-3 border-[3px]`}
               >
-                نظام نقاط البيع السّحابي
-              </th>
-              <td className="text-center text-[#00000099] text-[25px]">
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  size="xl"
-                  color="#373873"
-                  className="w-full mx-auto"
-                />
-              </td>
-              <td className="text-center text-[#00000099] text-[25px]">
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  size="xl"
-                  color="#373873"
-                  className="w-full mx-auto"
-                />
-              </td>
-              <td className="text-center text-[#00000099] text-[25px]">
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  size="xl"
-                  color="#373873"
-                  className="w-full mx-auto"
-                />
-              </td>
-            </tr>
-            {/* row 2 */}
-            <tr className="bg-white border-b-2 h-20">
-              <th
-                scope="row"
-                className="px-7 text-[#00000099] whitespace-nowrap"
-              >
-                إدارة المخزون
-              </th>
-              <td className="text-center text-[#00000099] text-[25px]">
-                إضافة إختيارية
-              </td>
-              <td className="text-center text-[#00000099] text-[25px]">
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  size="xl"
-                  color="#373873"
-                  className="w-full mx-auto"
-                />
-              </td>
-              <td className="text-center text-[#00000099] text-[25px]">
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  size="xl"
-                  color="#373873"
-                  className="w-full mx-auto"
-                />
-              </td>
-            </tr>
-            {/* row 3 */}
-            <tr className="bg-white border-b-2 h-20">
-              <th
-                scope="row"
-                className="px-7 text-[#00000099] whitespace-nowrap"
-              >
-                مناطق التوصيل{" "}
-              </th>
-              <td className="text-center text-[#00000099] text-[25px]">
-                <FontAwesomeIcon
-                  icon={faXmark}
-                  size="xl"
-                  color="#373873"
-                  className="w-full mx-auto"
-                />
-              </td>
-              <td className="text-center text-[#00000099] text-[25px]">
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  size="xl"
-                  color="#373873"
-                  className="w-full mx-auto"
-                />
-              </td>
-              <td className="text-center text-[#00000099] text-[25px]">
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  size="xl"
-                  color="#373873"
-                  className="w-full mx-auto"
-                />
-              </td>
-            </tr>
-            {/* row 4 Price */}
-            <tr className="bg-white border-b-2 h-28">
-              <th scope="row" className="text-[#00000099] whitespace-nowrap">
-                <button className="rounded-[100px] border-[3px] border-primary w-64 h-16 mx-auto flex gap-3 justify-center items-center py-2">
-                  <span className="mt-1">
-                    <FontAwesomeIcon icon={faO} color="#373873" size="2xl" />
-                  </span>
-                  <span className="text-black text-[25px] leading-[30px] font-normal font-[dinFontRegular]">
-                    الدفع شهريا
-                  </span>
-                </button>
-              </th>
-
-              <td className="text-center text-black text-[40px]"> 2000 رس</td>
-              <td className="text-center text-black text-[40px]"> 2000 رس</td>
-              <td className="text-center text-black text-[40px]"> 2000 رس</td>
-            </tr>
-            {/* row 5 Price */}
-            <tr className="bg-white border-b-2 h-28">
-              <th scope="row" className="text-[#00000099] whitespace-nowrap">
-                <button className="rounded-[100px] border-[3px] border-[#EEEEEEEE] w-64 h-16 mx-auto flex gap-3 justify-center items-center py-2">
-                  <span className="mt-1">
-                    <FontAwesomeIcon icon={faO} color="#EEEEEEEE" size="2xl" />
-                  </span>
-                  <span className="text-black text-[25px] leading-[30px] font-normal font-[dinFontRegular]">
-                    الدفع سنويا
-                  </span>
-                </button>
-              </th>
-              <td className="text-center">
-                <button className="h-16 w-56 bg-primary rounded-[100px] text-white text-2xl">
-                  اطلب الان
-                </button>
-              </td>
-              <td className="text-center">
-                <button className="h-16 w-56 bg-primary rounded-[100px] text-white text-2xl">
-                  اطلب الان
-                </button>
-              </td>
-              <td className="text-center">
-                <button className="h-16 w-56 bg-primary rounded-[100px] text-white text-2xl">
-                  اطلب الان
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                <span>
+                  <FontAwesomeIcon
+                    icon={faO}
+                    size="xl"
+                    color={`${per == "per_year" ? "#373873" : "#EEEEEEEE"}`}
+                    className="w-full mx-auto"
+                  />
+                </span>
+                <span className="text-2xl">الدفع سنويا</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        {/* 3 cols */}
+        {data.map(
+          ({ title, id, advantages, price_per_month, price_per_year }) => {
+            return (
+              <div key={id} className="border-r-2 border-[#E8E8E8] text-center">
+                {/* Head */}
+                <div className="bg-[#F9F9F9] h-40 flex items-center justify-center">
+                  <h3 className="text-[35px] leading-[58px] font-[dinFontRegular]">
+                    {title}
+                  </h3>
+                </div>
+                <div className="flex items-center justify-center w-full flex-col">
+                  {advantages.map(({ include, id }) => {
+                    return (
+                      <div
+                        key={id}
+                        className="w-full flex items-center justify-center h-20 border-b-2 border-[#E8E8E8]"
+                      >
+                        {include ? (
+                          <FontAwesomeIcon
+                            icon={faCheck}
+                            size="2xl"
+                            color="#373873"
+                            className="w-full mx-auto"
+                          />
+                        ) : (
+                          <FontAwesomeIcon
+                            icon={faXmark}
+                            size="2xl"
+                            color="#373873"
+                            className="w-full mx-auto"
+                          />
+                        )}
+                      </div>
+                    );
+                  })}
+                  {/* price */}
+                  <div className="w-full flex items-center justify-center h-24 border-b-2 border-[#E8E8E8]">
+                    <h4 className="font-[dinFontRegular] text-[40px] leading-[65px]">
+                      {per == "per_year" ? price_per_year : price_per_month} رس
+                    </h4>
+                  </div>
+                  {/* button */}
+                  <div className="w-full flex items-center justify-center h-24 border-b-2 border-[#E8E8E8]">
+                    <Button width="w-[50%]">اطلب الان</Button>
+                  </div>
+                </div>
+              </div>
+            );
+          }
+        )}
       </div>
     </div>
   );
 };
 
-export default PackagesTable;
+export default Packages2;
