@@ -23,7 +23,7 @@ const Packages2 = () => {
               return (
                 <div
                   key={id}
-                  className="w-full flex items-center justify-start h-20 border-b-2 border-[#E8E8E8]"
+                  className="w-full flex items-center justify-start h-20 border-b-2 border-[#E8E8E8] pr-7"
                 >
                   <h4 className="text-[#00000099] text-2xl">{title}</h4>
                 </div>
