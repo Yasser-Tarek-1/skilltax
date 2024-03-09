@@ -21,9 +21,8 @@ const Screen = () => {
               <p> الامثل لادارة مبيعاتك</p>
             </h1>
             <p className="text-sm sm:text-xl xl:text-2xl text-[#FFFFFFCC]">
-              تسهيل وتنظيم عملية الإدارة والتنظيم للمطاعم و المبيعات بطريقة
-              فعّالة وبسيطة. يتيح هذا النظام للمنظمين إدارة جميع جوانب المطعم
-              بكل يسر وسلاسة.
+              تسهيل وتنظيم عملية إدارة وتنظيم المطاعم و المبيعات بطريقة فعّالة
+              وبسيطة. يتيح هذا النظام إدارة جميع جوانب المطعم بكل يسر وسهولة.
             </p>
             <div className="flex items-center gap-4">
               <button className="w-32 h-12 sm:w-40 sm:h-14 xl:w-[220px] xl:h-[67px] text-xs sm:text-base xl:text-xl rounded-full flex items-center justify-center bg-white text-primary">

@@ -58,13 +58,12 @@ const PackagesTableSmallScreen = () => {
                     return (
                       <div
                         key={id}
-                        className="row border-t-[1.5px] border-[#E8E8E8]  h-14 flex items-center justify-between"
+                        className="row border-t-[1.5px] overflow-hidden border-[#E8E8E8] h-14 flex items-center justify-between"
                       >
-                        <span className="text-sm text-[#00000099] px-6">
+                        <p className="text-sm text-[#00000099] px-6 flex-1">
                           {title}
-                        </span>
-
-                        <span className="border-r-[1.5px] h-full border-[#E8E8E8] px-6 flex items-center justify-center">
+                        </p>
+                        <p className="border-r-[1.5px] w-14 h-full border-[#E8E8E8] flex items-center justify-center">
                           {include ? (
                             <FontAwesomeIcon
                               icon={faCheck}
@@ -80,7 +79,7 @@ const PackagesTableSmallScreen = () => {
                               className="w-full mx-auto"
                             />
                           )}
-                        </span>
+                        </p>
                       </div>
                     );
                   })}
@@ -92,9 +91,9 @@ const PackagesTableSmallScreen = () => {
                         per == "per_month"
                           ? "border-primary"
                           : "border-[#EEEEEEEE]"
-                      } h-12 w-[80%] max-w-[380px]  mx-auto rounded-[100px] flex items-center gap-2 px-3 border-[2px]`}
+                      } h-12 w-[80%] max-w-[380px] mx-auto rounded-[100px] flex items-center gap-2 px-3 border-[2px]`}
                     >
-                      <span>
+                      <p className="w-8">
                         <FontAwesomeIcon
                           icon={faO}
                           size="lg"
@@ -103,8 +102,10 @@ const PackagesTableSmallScreen = () => {
                           }`}
                           className="w-full mx-auto"
                         />
-                      </span>
-                      <span className="text-sm">الدفع شهريا</span>
+                      </p>
+                      <p className="text-sm flex items-center justify-start flex-1 ">
+                        الدفع شهريا
+                      </p>
                     </button>
                     <button
                       onClick={() => setPer("per_year")}

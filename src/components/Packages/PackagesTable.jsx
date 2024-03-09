@@ -11,7 +11,7 @@ const Packages2 = () => {
     <div className="w-full h-full mt-[55px] hidden lg:block">
       <div className="relative overflow-x-auto rounded-[40px] border-2 border-[#E8E8E8] grid grid-cols-4">
         {/* 1 col */}
-        <div className="border-r-2 border-[#E8E8E8] text-center">
+        <div className="text-center">
           {/* Head */}
           <div className="bg-[#F9F9F9] h-40 flex items-center justify-center">
             <h3 className="text-[35px] leading-[58px] font-[dinFontRegular]">
@@ -37,34 +37,38 @@ const Packages2 = () => {
                   per == "per_month" ? "border-primary" : "border-[#EEEEEEEE]"
                 } h-16 w-[80%] mx-auto rounded-[100px] flex items-center gap-2 px-3 border-[3px]`}
               >
-                <span>
+                <p className="w-8">
                   <FontAwesomeIcon
                     icon={faO}
                     size="xl"
                     color={`${per == "per_month" ? "#373873" : "#EEEEEEEE"}`}
                     className="w-full mx-auto"
                   />
-                </span>
-                <span className="text-2xl">الدفع شهريا</span>
+                </p>
+                <p className="text-2xl flex items-center justify-start flex-1 mt-[-4px]">
+                  الدفع شهريا
+                </p>
               </button>
             </div>
             {/* per year */}
-            <div className="w-full flex items-center justify-center h-24 border-b-2 border-[#E8E8E8]">
+            <div className="w-full flex items-center justify-center h-24">
               <button
                 onClick={() => setPer("per_year")}
                 className={`${
                   per == "per_year" ? "border-primary" : "border-[#EEEEEEEE]"
                 } h-16 w-[80%] mx-auto rounded-[100px] flex items-center gap-2 px-3 border-[3px]`}
               >
-                <span>
+                <p className="w-8">
                   <FontAwesomeIcon
                     icon={faO}
                     size="xl"
                     color={`${per == "per_year" ? "#373873" : "#EEEEEEEE"}`}
                     className="w-full mx-auto"
                   />
-                </span>
-                <span className="text-2xl">الدفع سنويا</span>
+                </p>
+                <p className="text-2xl flex items-center justify-start flex-1 mt-[-4px]">
+                  الدفع سنويا
+                </p>
               </button>
             </div>
           </div>
@@ -112,7 +116,7 @@ const Packages2 = () => {
                     </h4>
                   </div>
                   {/* button */}
-                  <div className="w-full flex items-center justify-center h-24 border-b-2 border-[#E8E8E8]">
+                  <div className="w-full flex items-center justify-center h-24">
                     <Button width="w-[50%]">اطلب الان</Button>
                   </div>
                 </div>
