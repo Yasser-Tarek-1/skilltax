@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
         <Screen />
       </div>
       {/* Sections */}
-      <div className="container mx-auto px-6 pt-10 sm:pt-20">
+      <div id="policy" className="container mx-auto px-6 pt-10 sm:pt-20">
         <div className="w-full mb-10 lg:mb-16 flex justify-center">
           <h3 className="text-xl sm:text-2xl lg:text-[35px] lg:leading-[50px] font-[dinFontBold]">
             السياسة والخصوصية

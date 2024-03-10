@@ -30,8 +30,11 @@ const Header = ({ onOpenSideHandler }) => {
             <FontAwesomeIcon
               icon={faBars}
               size="xl"
-              // className="h-7"
-              color={pathname == "/" ? "#fff " : "#000"}
+              color={
+                pathname == "/" || pathname == "/privacy-policy"
+                  ? "#fff "
+                  : "#000"
+              }
             />
           </button>
           <div className="w-full h-full hidden lg:flex items-center justify-between">

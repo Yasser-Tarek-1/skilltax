@@ -55,11 +55,11 @@ const Footer = () => {
                   الأسئلة الشائعة
                 </p>
               </Link>
-              <Link to="/privacy-policy">
+              <HashLink to="/privacy-policy#policy">
                 <p className="text-lg xl:text-[22px] xl:leading-[30px] text-[#FFFFFF99]">
                   سياسة خصوصية
                 </p>
-              </Link>
+              </HashLink>
               <Link to="/">
                 <p className="text-lg xl:text-[22px] xl:leading-[30px] text-[#FFFFFF99]">
                   شروط الاستخدام
