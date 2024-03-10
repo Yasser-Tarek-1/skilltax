@@ -11,7 +11,10 @@ import ContactUs from "../components/Home/Sections/ContactUs";
 const Home = () => {
   return (
     <div className="w-full">
-      <div className="bg-primary md:bg-gradient-to-r from-orange to-30% from-30% to-primary md:bg-transparent">
+      <div
+        id="home"
+        className="bg-primary md:bg-gradient-to-r from-orange to-30% from-30% to-primary md:bg-transparent"
+      >
         <Screen />
       </div>
       {/* Sections */}

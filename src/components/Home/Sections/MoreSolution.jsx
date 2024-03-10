@@ -1,3 +1,4 @@
+import { HashLink } from "react-router-hash-link";
 import { iPad } from "../../../assets";
 import Button from "../../Layouts/Button";
 
@@ -13,9 +14,11 @@ const MoreSolution = () => {
             نحن نؤمن بأن تلبية احتياجات عملائنا تتطلب تقديم حلول مخصصة وفقًا
             لاحتياجاتهم .{" "}
           </p>
-          <Button prim={true} width="w-[60%] sm:w-[40%]">
-            تواصل معنا
-          </Button>
+          <HashLink to="/#contactUs">
+            <Button prim={true} width="w-[60%] sm:w-[40%]">
+              تواصل معنا
+            </Button>
+          </HashLink>
         </div>
         <div className="w-full md:w-[70%] lg:w-[55%]">
           <img src={iPad} className="w-full max-w-full" loading="lazy" />

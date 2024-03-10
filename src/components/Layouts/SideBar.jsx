@@ -1,13 +1,11 @@
-import { NavLink } from "react-router-dom";
 import Links from "./Links";
 
 const SidebarMobile = ({ isOpen, onCloseSideHandler }) => {
-  let o = false;
   return (
     <div
       className={`${
-        isOpen ? " translate-x-0" : "translate-x-[-100%]"
-      } transition-all duration-300 absolute z-[999] left-0 rounded-r-2xl w-fit overflow-hidden mt-16`}
+        isOpen ? "translate-y-0 opacity-100" : "translate-y-[-100%] opacity-0"
+      } lg:hidden w-[90%] left-[50%] translate-x-[-50%] transition-all duration-500 absolute z-[998]  rounded-lg overflow-hidden mt-16`}
     >
       <Links onCloseSideHandler={onCloseSideHandler} />
     </div>

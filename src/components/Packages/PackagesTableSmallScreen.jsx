@@ -32,7 +32,7 @@ const PackagesTableSmallScreen = () => {
             return (
               <div
                 key={id}
-                className="w-full relative overflow-hidden z-50 max-w-80 bg-[#F9F9F9] border-[1.5px] border-[#E8E8E8] rounded-[20px] flex flex-col items-center justify-center"
+                className="w-full relative overflow-hidden z-50 max-w-96 bg-[#F9F9F9] border-[1.5px] border-[#E8E8E8] rounded-[20px] flex flex-col items-center justify-center"
               >
                 {/* head */}
                 <div

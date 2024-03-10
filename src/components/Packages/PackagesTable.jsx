@@ -25,7 +25,9 @@ const Packages2 = () => {
                   key={id}
                   className="w-full flex items-center justify-start h-20 border-b-2 border-[#E8E8E8] pr-7"
                 >
-                  <h4 className="text-[#00000099] text-2xl">{title}</h4>
+                  <h4 className="text-[#00000099] text-xl xl:text-2xl">
+                    {title}
+                  </h4>
                 </div>
               );
             })}
@@ -111,7 +113,7 @@ const Packages2 = () => {
                   })}
                   {/* price */}
                   <div className="w-full flex items-center justify-center h-24 border-b-2 border-[#E8E8E8]">
-                    <h4 className="font-[dinFontRegular] text-[40px] leading-[65px]">
+                    <h4 className="font-[dinFontRegular] text-4xl xl:text-[40px] xl:leading-[65px]">
                       {per == "per_year" ? price_per_year : price_per_month} رس
                     </h4>
                   </div>

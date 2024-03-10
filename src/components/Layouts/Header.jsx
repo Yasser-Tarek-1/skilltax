@@ -8,13 +8,17 @@ const Header = ({ onOpenSideHandler }) => {
   const { pathname } = useLocation();
 
   return (
-    <div className="w-full inset-0 absolute z-10 h-16 sm:h-20 lg:h-32 flex items-center justify-center">
-      <div className="container mx-auto px-4">
+    <div className="w-full inset-0 absolute z-[999] h-16 sm:h-20 lg:h-32 flex items-center justify-center">
+      <div className="container mx-auto px-6">
         <div className="w-full h-full flex items-center justify-between gap-16 xl:gap-32">
           <Link to="/">
             <div>
               <img
-                src={pathname == "/" ? logo : logo_primary}
+                src={
+                  pathname == "/" || pathname == "/privacy-policy"
+                    ? logo
+                    : logo_primary
+                }
                 alt="SkillTax"
                 className="w-[120px] lg:w-[150px]"
                 loading="lazy"

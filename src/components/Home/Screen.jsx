@@ -2,7 +2,7 @@ import { home, homeLine } from "../../assets";
 
 const Screen = () => {
   return (
-    <div id="#home" className="w-full pt-24 sm:pt-40 lg:pt-48 overflow-hidden">
+    <div className="w-full pt-24 sm:pt-40 lg:pt-48 overflow-hidden">
       <div className="container px-4 mx-auto">
         <div className="w-full h-full flex flex-col gap-12 lg:flex-row items-end justify-between relative ">
           <div className=" h-full lg:pb-32 text-white relative z-10 flex flex-col gap-6 lg:gap-8">

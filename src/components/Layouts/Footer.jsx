@@ -11,9 +11,8 @@ const Footer = () => {
           <div className="flex flex-col items-start gap-4 lg:gap-6 max-w-[500px]">
             <img src={logo} className="w-40 xl:w-64" loading="lazy" />
             <p className="text-[#FFFFFF99] text-[15px] w-[90%] xl:text-[22px] xl:leading-[30px] font-[dinFontRegularc]">
-              هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
-              هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو
-              العديد من النصوص الأخرى إضافة.
+              نفخر بنظام نقاط البيع الخاص بنا المصمم خصيصًا للمطاعم والكافيهات،
+              حيث ستجد تجربة لا مثيل لها في إدارة عملك وتحسين أدائه.
             </p>
             <img src={payments} className="w-[70%] max-w-full" loading="lazy" />
           </div>
@@ -23,11 +22,11 @@ const Footer = () => {
               روابط سريعة
             </h3>
             <div className="flex flex-col gap-3 xl:gap-4 mt-4 lg:mt-6">
-              <Link href="/">
+              <HashLink to="/#home">
                 <p className="text-lg xl:text-[22px] xl:leading-[30px] text-[#FFFFFF99]">
                   الرئيسية
                 </p>
-              </Link>
+              </HashLink>
               <HashLink to="/#solution">
                 <p className="text-lg xl:text-[22px] xl:leading-[30px] text-[#FFFFFF99]">
                   حلول سكيل تاكس
@@ -56,7 +55,7 @@ const Footer = () => {
                   الأسئلة الشائعة
                 </p>
               </Link>
-              <Link to="/">
+              <Link to="/privacy-policy">
                 <p className="text-lg xl:text-[22px] xl:leading-[30px] text-[#FFFFFF99]">
                   سياسة خصوصية
                 </p>
@@ -74,27 +73,27 @@ const Footer = () => {
               التواصل الاجتماعي
             </h3>
             <div className="flex flex-col gap-3 xl:gap-4 mt-4 lg:mt-6">
-              <a href="#" target="_black">
+              <a target="_blank">
                 <p className="text-lg xl:text-[22px] xl:leading-[30px] text-[#FFFFFF99]">
                   انستقرام
                 </p>
               </a>
-              <a href="#" target="_black">
+              <a target="_blank">
                 <p className="text-lg xl:text-[22px] xl:leading-[30px] text-[#FFFFFF99]">
                   لينكد ان
                 </p>
               </a>
-              <a href="#" target="_black">
+              <a target="_blank">
                 <p className="text-lg xl:text-[22px] xl:leading-[30px] text-[#FFFFFF99]">
                   يوتيوب
                 </p>
               </a>
-              <a href="#" target="_black">
+              <a target="_blank">
                 <p className="text-lg xl:text-[22px] xl:leading-[30px] text-[#FFFFFF99]">
                   تويتر
                 </p>
               </a>
-              <a href="#" target="_black">
+              <a href="https://wa.me/+966553559038" target="_blank">
                 <p className="text-lg xl:text-[22px] xl:leading-[30px] text-[#FFFFFF99]">
                   واتس اب
                 </p>
