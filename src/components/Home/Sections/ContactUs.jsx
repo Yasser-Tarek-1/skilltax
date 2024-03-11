@@ -66,7 +66,10 @@ const ContactUs = () => {
                 placeholder="اكتب أسم النشاط هنا"
               />
             </div>
-            <button className=" bg-primary rounded-[100px] h-14 lg:h-16 w-full lg:w-[50%] text-white">
+            <button
+              type="button"
+              className=" bg-primary rounded-[100px] h-14 lg:h-16 w-full lg:w-[50%] text-white"
+            >
               ارسال
             </button>
           </form>

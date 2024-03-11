@@ -10,7 +10,7 @@ const Packages = () => {
   }, []);
   return (
     <div className="w-full h-full pt-40">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4">
         <div className="w-full mb-10 lg:mb-16 flex justify-center">
           <h3 className="text-xl sm:text-2xl lg:text-[35px] lg:leading-[50px] font-[dinFontBold]">
             أسعار الباقات

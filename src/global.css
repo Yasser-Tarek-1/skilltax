@@ -21,9 +21,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body,
-p,
-span {
+body {
   font-family: "dinFontRegular";
 }
 

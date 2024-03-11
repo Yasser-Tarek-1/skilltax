@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
-const Links = ({ onCloseSideHandler }) => {
+const Links = () => {
   let { pathname } = useLocation();
   return (
     <>
@@ -9,42 +9,38 @@ const Links = ({ onCloseSideHandler }) => {
         className={`
       ${
         pathname == "/" || pathname == "/privacy-policy"
-          ? "lg:text-white"
-          : "lg:text-black"
+          ? "bg-white text-primary lg:text-white"
+          : "bg-primary text-white lg:text-black"
       }
-      flex items-center flex-col bg-white lg:bg-transparent lg:flex-row justify-between text-primary gap-0 lg:gap-3 xl:gap-9
+      flex items-center flex-col rounded-lg sm:rounded-none overflow-hidden lg:bg-transparent lg:flex-row justify-between gap-0 lg:gap-3 xl:gap-9
       `}
       >
         <Link
-          onClick={onCloseSideHandler}
           to="/"
           className="text-sm lg:text-lg xl:text-[22px] px-4 h-12 flex items-center justify-center"
         >
           الرئيسية
         </Link>
         <HashLink
-          onClick={onCloseSideHandler}
           to="/#solution"
           className=" text-sm lg:text-lg xl:text-[22px] px-4 h-12 flex items-center justify-center"
         >
           حلول سكيل تاكس
         </HashLink>
         <HashLink
-          onClick={onCloseSideHandler}
           to="/#moreSolution"
           className="text-sm lg:text-lg xl:text-[22px] px-4 h-12 flex items-center justify-center"
         >
           حلول خاصة لأعمالك
         </HashLink>
         <Link
-          onClick={onCloseSideHandler}
           to="/packages"
           className="text-sm lg:text-lg xl:text-[22px] px-4 h-12 flex items-center justify-center"
         >
           الباقات
         </Link>
       </div>
-      <HashLink onClick={onCloseSideHandler} to="#contactUs">
+      <HashLink to="#contactUs">
         <button
           className={`${
             pathname == "/" || pathname == "/privacy-policy"

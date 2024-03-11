@@ -14,9 +14,7 @@ const Packages2 = () => {
         <div className="text-center">
           {/* Head */}
           <div className="bg-[#F9F9F9] h-40 flex items-center justify-center">
-            <h3 className="text-[35px] leading-[58px] font-[dinFontRegular]">
-              الخصائص
-            </h3>
+            <h3 className="text-[35px] leading-[58px] ">الخصائص</h3>
           </div>
           <div className="flex items-center justify-center w-full flex-col">
             {data[0].advantages.map(({ title, id }) => {
@@ -82,9 +80,7 @@ const Packages2 = () => {
               <div key={id} className="border-r-2 border-[#E8E8E8] text-center">
                 {/* Head */}
                 <div className="bg-[#F9F9F9] h-40 flex items-center justify-center">
-                  <h3 className="text-[35px] leading-[58px] font-[dinFontRegular]">
-                    {title}
-                  </h3>
+                  <h3 className="text-[35px] leading-[58px] ">{title}</h3>
                 </div>
                 <div className="flex items-center justify-center w-full flex-col">
                   {advantages.map(({ include, id }) => {
@@ -113,7 +109,7 @@ const Packages2 = () => {
                   })}
                   {/* price */}
                   <div className="w-full flex items-center justify-center h-24 border-b-2 border-[#E8E8E8]">
-                    <h4 className="font-[dinFontRegular] text-4xl xl:text-[40px] xl:leading-[65px]">
+                    <h4 className=" text-4xl xl:text-[40px] xl:leading-[65px]">
                       {per == "per_year" ? price_per_year : price_per_month} رس
                     </h4>
                   </div>

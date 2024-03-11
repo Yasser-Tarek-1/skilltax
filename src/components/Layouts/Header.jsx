@@ -8,8 +8,8 @@ const Header = ({ onOpenSideHandler }) => {
   const { pathname } = useLocation();
 
   return (
-    <div className="w-full inset-0 absolute z-[999] h-16 sm:h-20 lg:h-32 flex items-center justify-center">
-      <div className="container mx-auto px-6">
+    <div className="w-full inset-0 absolute z-[990] h-16 sm:h-20 lg:h-32 flex items-center justify-center">
+      <div className="container mx-auto px-4">
         <div className="w-full h-full flex items-center justify-between gap-16 xl:gap-32">
           <Link to="/">
             <div>
@@ -20,7 +20,7 @@ const Header = ({ onOpenSideHandler }) => {
                     : logo_primary
                 }
                 alt="SkillTax"
-                className="w-[120px] lg:w-[150px]"
+                className="w-[120px] lg:w-[180px]"
                 loading="lazy"
               />
             </div>
@@ -33,7 +33,7 @@ const Header = ({ onOpenSideHandler }) => {
               color={
                 pathname == "/" || pathname == "/privacy-policy"
                   ? "#fff "
-                  : "#000"
+                  : "#373873"
               }
             />
           </button>

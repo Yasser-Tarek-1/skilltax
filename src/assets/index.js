@@ -10,21 +10,20 @@ import wifi from "./wifi.svg";
 // Tracking Section
 import storeOne from "./store_1.svg";
 import storeTwo from "./store_2.svg";
-//
+// Solution
 import iPad from "./iPad.svg";
-//
+// More Solution
 import email from "./email.svg";
 import gift from "./gift.svg";
 import qrCode from "./qrCode.svg";
-// footer
-import payments from "./payments.svg";
-//
 import restaurants from "./restaurants.svg";
 import cafes from "./cafes.svg";
 import cafes2 from "./cafes2.svg";
 import from_cars from "./from_cars.svg";
 import for_your_work from "./for_your_work.svg";
 import food_trucks from "./food_trucks.svg";
+// Footer
+import payments from "./payments.svg";
 
 export {
   logo,

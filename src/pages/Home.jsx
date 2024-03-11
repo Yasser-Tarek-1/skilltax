@@ -18,7 +18,7 @@ const Home = () => {
         <Screen />
       </div>
       {/* Sections */}
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4">
         <Features />
         <Tracking />
         <System />

@@ -60,6 +60,11 @@ const Footer = () => {
                   سياسة خصوصية
                 </p>
               </HashLink>
+              {/* <Link to="/">
+                <p className="text-lg xl:text-[22px] xl:leading-[30px] text-[#FFFFFF99]">
+                  سياسة خصوصية
+                </p>
+              </Link> */}
               <Link to="/">
                 <p className="text-lg xl:text-[22px] xl:leading-[30px] text-[#FFFFFF99]">
                   شروط الاستخدام
@@ -73,7 +78,7 @@ const Footer = () => {
               التواصل الاجتماعي
             </h3>
             <div className="flex flex-col gap-3 xl:gap-4 mt-4 lg:mt-6">
-              <a target="_blank">
+              <a href="https://www.instagram.com/skilltax.sa" target="_blank">
                 <p className="text-lg xl:text-[22px] xl:leading-[30px] text-[#FFFFFF99]">
                   انستقرام
                 </p>
@@ -88,7 +93,10 @@ const Footer = () => {
                   يوتيوب
                 </p>
               </a>
-              <a target="_blank">
+              <a
+                href="https://twitter.com/skilltax?s=21&t=mjl-yGP7nqug1de3rxbgWQ"
+                target="_blank"
+              >
                 <p className="text-lg xl:text-[22px] xl:leading-[30px] text-[#FFFFFF99]">
                   تويتر
                 </p>
