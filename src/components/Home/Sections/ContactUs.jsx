@@ -90,7 +90,7 @@ const ContactUs = () => {
                 "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)",
             }}
           ></div>
-          <div className="relative z-10 p-9 lg:p-12 text-white">
+          <div className="relative z-10 p-6 lg:p-12 text-white">
             <h4 className="text-xl xl:text-[30px] xl:leading-[44px]">
               افضل نظام ادارة نقاط البيع
             </h4>

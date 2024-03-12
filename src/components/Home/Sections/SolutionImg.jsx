@@ -19,10 +19,10 @@ const SolutionImg = ({ img, title }) => {
   return (
     <>
       {!imageLoaded ? (
-        <SkeletonLoader className="w-full h-[210px] sm:w-[310px] lg:h-[310px] lg:w-[470px] rounded-[40px]" />
+        <SkeletonLoader className="w-full h-[210px] 2xl:h-[310px] rounded-[40px]" />
       ) : (
         <div
-          className="flex items-end w-full h-[210px] sm:w-[310px] lg:h-[310px] lg:w-[470px] rounded-[40px] relative overflow-hidden bg-cover"
+          className="flex items-end w-full h-[210px] 2xl:h-[310px] rounded-[40px] relative overflow-hidden bg-cover"
           style={backgroundImageStyle}
         >
           <div

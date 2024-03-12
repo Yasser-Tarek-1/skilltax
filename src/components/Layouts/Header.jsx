@@ -19,7 +19,7 @@ const Header = ({ onOpenSideHandler }) => {
                     ? logo
                     : logo_primary
                 }
-                alt="SkillTax"
+                alt="SkillTax - سكيل تاكس نظام الكاشير الامثل"
                 className="w-[120px] lg:w-[180px]"
                 loading="lazy"
               />

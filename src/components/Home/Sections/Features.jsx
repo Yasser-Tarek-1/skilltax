@@ -30,7 +30,7 @@ const FEATURES = [
 
 const Features = () => {
   return (
-    <section id="#" className="pt-20 sm:pt-28 2xl:pt-52">
+    <section className="pt-20 sm:pt-28 2xl:pt-52">
       <Head title="مميزاتنا">
         تتميز بالمرونه والقدرة على تلبية كافة إحتياجتك بشكل فعال وفقاً لمتطلباتك
         ، مما يجعل تجربتك معنا متميزة
@@ -44,7 +44,7 @@ const Features = () => {
             >
               <img
                 src={icon}
-                alt="icon"
+                alt={h4}
                 className="w-[75px] lg:w-[105px] mb-4"
                 loading="lazy"
               />

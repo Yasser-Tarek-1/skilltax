@@ -25,7 +25,7 @@ const Solution = () => {
           حلول فعالة لمختلف القطاعات.
         </h3>
       </div>
-      <div className="w-full flex items-center gap-8 flex-wrap">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 flex-wrap">
         {/* Solution Card */}
         {flexible_solutions.map(({ id, ...props }) => {
           return <SolutionImg key={id} {...props} />;

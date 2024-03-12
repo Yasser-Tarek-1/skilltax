@@ -6,6 +6,7 @@ import SidebarMobile from "./components/Layouts/SideBar";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { HelmetProvider } from "react-helmet-async";
 
 const Root = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,11 +28,10 @@ const Root = () => {
       <a
         href="https://wa.me/+966553559038"
         target="_blank"
-        className="bg-[#25d366] w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center fixed bottom-7 right-7 sm:bottom-10 sm:right-10 z-[998]"
+        className="bg-[#25d366] z-[999] w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center fixed bottom-7 right-7 sm:bottom-10 sm:right-10"
       >
         <FontAwesomeIcon size="2x" icon={faWhatsapp} color="#fff" />
       </a>
-      {/* <Overlay isOpen={isOpen} onCloseSideHandler={closeSideHandler} /> */}
       <SidebarMobile isOpen={isOpen} onCloseSideHandler={closeSideHandler} />
       <Header onOpenSideHandler={openSideHandler} />
       <div>

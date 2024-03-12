@@ -1,14 +1,14 @@
 import { storeTwo } from "../../../assets";
 import Button from "../../Layouts/Button";
 
-const System = () => {
+const KitchenSystem = () => {
   return (
-    <section id="#" className="pt-20 sm:pt-28 2xl:pt-52">
+    <section className="pt-20 sm:pt-28 2xl:pt-52">
       <div className="flex items-center gap-8 lg:gap-32 xl:gap-52 flex-col lg:flex-row-reverse">
         <div className="flex-1 custom_shadow">
           <img
             src={storeTwo}
-            alt="tracking"
+            alt="Kitchen System"
             className="max-w-full"
             loading="lazy"
           />
@@ -30,4 +30,4 @@ const System = () => {
   );
 };
 
-export default System;
+export default KitchenSystem;

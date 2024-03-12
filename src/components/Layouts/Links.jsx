@@ -17,28 +17,34 @@ const Links = () => {
       >
         <Link
           to="/"
-          className="text-sm lg:text-lg xl:text-[22px] px-4 h-12 flex items-center justify-center"
+          className="text-sm lg:text-lg 2xl:text-[22px] px-4 h-12 flex items-center justify-center"
         >
           الرئيسية
         </Link>
         <HashLink
           to="/#solution"
-          className=" text-sm lg:text-lg xl:text-[22px] px-4 h-12 flex items-center justify-center"
+          className=" text-sm lg:text-lg 2xl:text-[22px] px-4 h-12 flex items-center justify-center"
         >
           حلول سكيل تاكس
         </HashLink>
         <HashLink
-          to="/#moreSolution"
-          className="text-sm lg:text-lg xl:text-[22px] px-4 h-12 flex items-center justify-center"
+          to="/#businessSolutions"
+          className="text-sm lg:text-lg 2xl:text-[22px] px-4 h-12 flex items-center justify-center"
         >
           حلول خاصة لأعمالك
         </HashLink>
         <Link
           to="/packages"
-          className="text-sm lg:text-lg xl:text-[22px] px-4 h-12 flex items-center justify-center"
+          className="text-sm lg:text-lg 2xl:text-[22px] px-4 h-12 flex items-center justify-center"
         >
           الباقات
         </Link>
+        <HashLink
+          to={`${pathname == "/packages" ? "#contactUs" : "/#contactUs"}`}
+          className="text-sm lg:hidden lg:text-lg 2xl:text-[22px] px-4 h-12 flex items-center justify-center"
+        >
+          تواصل معنا
+        </HashLink>
       </div>
       <HashLink to="#contactUs">
         <button

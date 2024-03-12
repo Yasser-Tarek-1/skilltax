@@ -3,12 +3,12 @@ import Button from "../../Layouts/Button";
 
 const Tracking = () => {
   return (
-    <section id="#" className="pt-20 sm:pt-28 2xl:pt-52">
+    <section className="pt-20 sm:pt-28 2xl:pt-52">
       <div className="flex items-center gap-8 lg:gap-32 xl:gap-52 flex-col lg:flex-row">
         <div className="flex-1 custom_shadow">
           <img
             src={storeOne}
-            alt="tracking"
+            alt="Tracking"
             className="max-w-full"
             loading="lazy"
           />

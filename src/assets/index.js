@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import logo_primary from "./logo_primary.svg";
 import homeLine from "./home-line.svg";
-import home from "./home.svg";
+import home from "./home.png";
 // Features Section
 import cloud from "./cloud.svg";
 import app from "./app.svg";
@@ -24,6 +24,8 @@ import for_your_work from "./for_your_work.svg";
 import food_trucks from "./food_trucks.svg";
 // Footer
 import payments from "./payments.svg";
+// seo
+import skilltax from "./skilltax.jpeg";
 
 export {
   logo,
@@ -47,4 +49,5 @@ export {
   from_cars,
   for_your_work,
   food_trucks,
+  skilltax,
 };

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "باقة بيسك",
-    "price_per_month": 167,
+    "price_per_month": 195,
     "price_per_year": 2000,
     "advantages": [
       {
@@ -100,7 +100,7 @@
   {
     "id": 2,
     "title": "باقة نمو",
-    "price_per_month": 229,
+    "price_per_month": 295,
     "price_per_year": 2750,
     "advantages": [
       {
@@ -198,7 +198,7 @@
   {
     "id": 3,
     "title": "باقة بريميوم",
-    "price_per_month": 346,
+    "price_per_month": 410,
     "price_per_year": 4150,
     "advantages": [
       {
