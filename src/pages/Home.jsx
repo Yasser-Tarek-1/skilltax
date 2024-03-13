@@ -1,17 +1,23 @@
 import Screen from "../components/Home/Screen";
 import Features from "../components/Home/Sections/Features";
 import Tracking from "../components/Home/Sections/Tracking";
-import KitchenSystem from "../components/Home/Sections/KitchenSystem";
 import Solution from "../components/Home/Sections/Solution";
 import BusinessSolutions from "../components/Home/Sections/BusinessSolutions";
 import MoreSolutions from "../components/Home/Sections/MoreSolutions";
 import ContactUs from "../components/Home/Sections/ContactUs";
-import HelmetSeo from "../components/Seo/HelmetSeo";
+import HelmetSEO from "../components/SEO/HelmetSEO";
+import { SECTIONS } from "../content";
+const SEO = {
+  title: "SkillTax - سكيل تاكس نظام الكاشير الامثل",
+  description:
+    "تسهيل وتنظيم عملية إدارة وتنظيم المطاعم و المبيعات بطريقة فعّالة وبسيطة. يتيح هذا النظام  إدارة جميع جوانب المطعم بكل يسر وسهولة.",
+  keywords: "تطبيق كاشير, نظام مطعم, نقاط بيع, نظام نقاط بيع, كاشير",
+};
 
 const Home = () => {
   return (
     <>
-      <HelmetSeo title={"SkillTax - سكيل تاكس نظام الكاشير الامثل"} />
+      <HelmetSEO {...SEO} />
       <div className="w-full">
         <div
           id="home"
@@ -22,8 +28,9 @@ const Home = () => {
         {/* Sections */}
         <div className="container mx-auto px-4">
           <Features />
-          <Tracking />
-          <KitchenSystem />
+          {SECTIONS.map(({ id, ...content }) => {
+            return <Tracking key={id} id={id} {...content} />;
+          })}
           <Solution />
           <BusinessSolutions />
           <MoreSolutions />

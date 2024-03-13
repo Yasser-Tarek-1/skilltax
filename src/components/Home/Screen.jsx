@@ -1,14 +1,13 @@
-import { Link } from "react-router-dom";
 import { home, homeLine } from "../../assets";
 import { HashLink } from "react-router-hash-link";
 
 const Screen = () => {
   return (
-    <div className="w-full pt-24 sm:pt-40 lg:pt-48 overflow-hidden">
+    <div className="w-full pt-24 sm:pt-32 lg:pt-36 xl:pt-52 overflow-hidden">
       <div className="container px-4 mx-auto">
         <div className="w-full h-full flex flex-col gap-12 lg:flex-row items-end justify-between relative ">
-          <div className="h-full lg:pb-32 text-white relative z-10 flex flex-col gap-6 2xl:gap-8">
-            <h1 className="text-[40px] leading-[52px] sm:text-[50px] sm:leading-[72px] 2xl:text-[75px] 2xl:leading-[104px]">
+          <div className="h-full lg:pb-16 text-white relative z-10 flex flex-col gap-4 2xl:gap-8">
+            <h1 className="text-[35px] leading-[47px] sm:text-[45px] sm:leading-[60px] 2xl:text-[70px] 2xl:leading-[90px]">
               <div className="relative">
                 <span className="relative z-10"> سكيل تاكس خيارك</span>
                 <div className="absolute bottom-[-12px] sm:bottom-[-17px] lg:bottom-[-24px]">
@@ -22,7 +21,7 @@ const Screen = () => {
               </div>
               <div> الامثل لادارة مبيعاتك</div>
             </h1>
-            <p className="text-sm sm:text-xl xl:text-2xl text-[#FFFFFFCC]">
+            <p className="text-sm sm:text-xl 2xl:text-2xl text-[#FFFFFFCC]">
               تسهيل وتنظيم عملية إدارة وتنظيم المطاعم و المبيعات بطريقة فعّالة
               وبسيطة. يتيح هذا النظام إدارة جميع جوانب المطعم بكل يسر وسهولة.
             </p>
@@ -37,7 +36,7 @@ const Screen = () => {
               </button>
             </div>
           </div>
-          <div className="w-[120%] relative left-0 sm:w-full 2xl:scale-110 2xl:top-[-27px]">
+          <div className="w-[120%] relative left-0 sm:w-full 2xl:scale-110 2xl:top-[-22px]">
             <img
               alt="Casher - كاشير"
               src={home}

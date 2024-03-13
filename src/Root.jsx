@@ -1,15 +1,15 @@
+import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Footer from "./components/Layouts/Footer";
 import Header from "./components/Layouts/Header";
 import SidebarMobile from "./components/Layouts/SideBar";
-// import Overlay from "./components/Modal/Overlay";
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { HelmetProvider } from "react-helmet-async";
+import Loading from "./components/Loading/Loading";
 
 const Root = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoding] = useState(true);
 
   const closeSideHandler = () => {
     if (isOpen) {
@@ -20,11 +20,21 @@ const Root = () => {
     setIsOpen(true);
   };
 
+  useEffect(() => {
+    let clear = setTimeout(() => {
+      setIsLoding(false);
+    }, 3000);
+    return () => {
+      clearTimeout(clear);
+    };
+  }, []);
+
   return (
     <div
       onClick={closeSideHandler}
       className="w-full h-full relative overflow-hidden"
     >
+      {isLoading && <Loading />}
       <a
         href="https://wa.me/+966553559038"
         target="_blank"

@@ -8,13 +8,13 @@ const Packages2 = () => {
   const [per, setPer] = useState("per_year");
 
   return (
-    <div className="w-full h-full mt-[55px] hidden lg:block">
+    <div className="w-full h-full mt-[40px] hidden lg:block">
       <div className="relative overflow-x-auto rounded-[40px] border-2 border-[#E8E8E8] grid grid-cols-4">
         {/* 1 col */}
         <div className="text-center">
           {/* Head */}
-          <div className="bg-[#F9F9F9] h-40 flex items-center justify-center">
-            <h3 className="text-[35px] leading-[58px] ">الخصائص</h3>
+          <div className="bg-[#F9F9F9] h-32 flex items-center justify-center">
+            <h3 className="text-2xl">الخصائص</h3>
           </div>
           <div className="flex items-center justify-center w-full flex-col">
             {data[0].advantages.map(({ title, id }) => {
@@ -23,7 +23,7 @@ const Packages2 = () => {
                   key={id}
                   className="w-full flex items-center justify-start h-20 border-b-2 border-[#E8E8E8] pr-7"
                 >
-                  <h4 className="text-[#00000099] text-xl xl:text-2xl">
+                  <h4 className="text-[#00000099] text-lg xl:text-xl">
                     {title}
                   </h4>
                 </div>
@@ -45,7 +45,7 @@ const Packages2 = () => {
                     className="w-full mx-auto"
                   />
                 </p>
-                <p className="text-2xl flex items-center justify-start flex-1 mt-[-4px]">
+                <p className="text-xl flex items-center justify-start flex-1 mt-[-4px]">
                   الدفع شهريا
                 </p>
               </button>
@@ -66,7 +66,7 @@ const Packages2 = () => {
                     className="w-full mx-auto"
                   />
                 </p>
-                <p className="text-2xl flex items-center justify-start flex-1 mt-[-4px]">
+                <p className="text-xl flex items-center justify-start flex-1 mt-[-4px]">
                   الدفع سنويا
                 </p>
               </button>
@@ -79,8 +79,8 @@ const Packages2 = () => {
             return (
               <div key={id} className="border-r-2 border-[#E8E8E8] text-center">
                 {/* Head */}
-                <div className="bg-[#F9F9F9] h-40 flex items-center justify-center">
-                  <h3 className="text-[35px] leading-[58px] ">{title}</h3>
+                <div className="bg-[#F9F9F9] h-32 flex items-center justify-center">
+                  <h3 className="text-2xl">{title}</h3>
                 </div>
                 <div className="flex items-center justify-center w-full flex-col">
                   {advantages.map(({ include, id }) => {
@@ -109,13 +109,21 @@ const Packages2 = () => {
                   })}
                   {/* price */}
                   <div className="w-full flex items-center justify-center h-24 border-b-2 border-[#E8E8E8]">
-                    <h4 className=" text-4xl xl:text-[40px] xl:leading-[65px]">
+                    <h4 className="text-3xl 2xl:text-4xl">
                       {per == "per_year" ? price_per_year : price_per_month} رس
                     </h4>
                   </div>
                   {/* button */}
                   <div className="w-full flex items-center justify-center h-24">
-                    <Button width="w-[50%]">اطلب الان</Button>
+                    <Button width="w-[50%] overflow-hidden">
+                      <a
+                        target="_blank"
+                        className="w-full h-full flex items-center justify-center"
+                        href="https://wa.me/+966553559038"
+                      >
+                        اطلب الان
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </div>

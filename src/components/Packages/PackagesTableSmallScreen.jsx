@@ -25,21 +25,23 @@ const PackagesTableSmallScreen = () => {
   };
 
   return (
-    <div className="w-full h-full mt-[55px] lg:hidden">
+    <div className="w-full h-full mt-[40px] lg:hidden">
       <div className="flex justify-center items-center flex-col gap-8">
         {data?.map(
           ({ id, title, advantages, price_per_month, price_per_year }) => {
             return (
               <div
                 key={id}
-                className="w-full relative overflow-hidden z-50 max-w-96 bg-[#F9F9F9] border-[1.5px] border-[#E8E8E8] rounded-[20px] flex flex-col items-center justify-center"
+                className="w-full relative overflow-hidden z-50 max-w-[90%] bg-[#F9F9F9] border-[1.5px] border-[#E8E8E8] rounded-[20px] flex flex-col items-center justify-center"
               >
                 {/* head */}
                 <div
                   id={id}
                   className="flex h-40 items-center justify-center flex-col py-9 px-6"
                 >
-                  <h3 className="text-2xl font-[dinFontRegular]">{title}</h3>
+                  <h3 className="text-xl sm:text-2xl font-[dinFontRegular]">
+                    {title}
+                  </h3>
                   <button
                     onClick={() => onShow(id)}
                     className="w-36 h-12 mt-5 text-xs text-primary bg-[#3738731A] rounded-[100px]"
@@ -143,7 +145,15 @@ const PackagesTableSmallScreen = () => {
                   </div>
                   {/* button */}
                   <div className="row border-t-[1.5px] border-[#E8E8E8] h-24 flex items-center  justify-around flex-col">
-                    <Button width="w-[50%] max-w-[280px]">اطلب الان</Button>
+                    <Button width="w-[50%] max-w-[280px] overflow-hidden">
+                      <a
+                        target="_blank"
+                        className="w-full h-full flex items-center justify-center"
+                        href="https://wa.me/+966553559038"
+                      >
+                        اطلب الان
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </div>

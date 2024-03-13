@@ -1,10 +1,12 @@
+import { contactUs } from "../../../assets";
+
 const ContactUs = () => {
   return (
-    <section id="contactUs" className="pt-20 sm:pt-28 2xl:pt-52">
+    <section id="contactUs" className="pt-20 sm:pt-28 2xl:pt-40">
       <div className="w-full flex items-center lg:gap-8 flex-col-reverse lg:flex-row">
         {/* Right Card */}
         <div className="w-full h-[830px] bg-[#F8F8F8] p-6 lg:p-10 border-[3px] border-[#EEEEEEEE] rounded-[40px]">
-          <h3 className="text-xl xl:text-[35px] xl:leading-[50px] font-[dinFontBold]">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-[35px] xl:leading-[50px] font-[dinFontBold]">
             تواصل معنا
           </h3>
           {/* Contact Us Form */}
@@ -17,7 +19,7 @@ const ContactUs = () => {
                 <input
                   id="name"
                   type="text"
-                  className="w-full outline-none border-[1.5] border-[#ECECEC] rounded-[100px] h-14 lg:h-16 px-7 lg:px-8"
+                  className="w-full outline-none border-[1.5] text-sm border-[#ECECEC] rounded-[100px] h-14 lg:h-16 px-4 sm:px-7 lg:px-8"
                   placeholder="اكتب اسمك هنا"
                 />
               </div>
@@ -28,7 +30,7 @@ const ContactUs = () => {
                 <input
                   id="activity"
                   type="text"
-                  className="w-full outline-none border-[1.5] border-[#ECECEC] rounded-[100px] h-14 lg:h-16 px-7 lg:px-8"
+                  className="w-full outline-none border-[1.5] text-sm border-[#ECECEC] rounded-[100px] h-14 lg:h-16 px-4 sm:px-7 lg:px-8"
                   placeholder="اكتب نوع النشاط"
                 />
               </div>
@@ -40,7 +42,7 @@ const ContactUs = () => {
               <input
                 id="phone"
                 type="nubmer"
-                className="w-full outline-none border-[1.5] border-[#ECECEC] rounded-[100px] h-14 lg:h-16 px-7 lg:px-8"
+                className="w-full outline-none border-[1.5] text-sm border-[#ECECEC] rounded-[100px] h-14 lg:h-16 px-4 sm:px-7 lg:px-8"
                 placeholder="اكتب رقم الهاتف هنا"
               />
             </div>
@@ -51,7 +53,7 @@ const ContactUs = () => {
               <input
                 id="email"
                 type="email"
-                className="w-full outline-none border-[1.5] border-[#ECECEC] rounded-[100px] h-14 lg:h-16 px-7 lg:px-8"
+                className="w-full outline-none border-[1.5] text-sm border-[#ECECEC] rounded-[100px] h-14 lg:h-16 px-4 sm:px-7 lg:px-8"
                 placeholder="اكتب بريدك الالكتروني هنا"
               />
             </div>
@@ -62,7 +64,7 @@ const ContactUs = () => {
               <input
                 id="company"
                 type="text"
-                className="w-full outline-none border-[1.5] border-[#ECECEC] rounded-[100px] h-14 lg:h-16 px-7 lg:px-8"
+                className="w-full outline-none border-[1.5] text-sm border-[#ECECEC] rounded-[100px] h-14 lg:h-16 px-4 sm:px-7 lg:px-8"
                 placeholder="اكتب أسم النشاط هنا"
               />
             </div>
@@ -78,8 +80,7 @@ const ContactUs = () => {
         <div
           className="w-full lg:h-[830px] pb-16 lg:pb-0 flex items-end rounded-[40px] relative bottom-[-64px] z-[-1] lg:bottom-0 overflow-hidden bg-cover"
           style={{
-            backgroundImage:
-              "url(https://s3-alpha-sig.figma.com/img/6e1a/d2d2/645235ad9879ca56fe186be99b4161de?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LlaCR37UCyPqvcKqVfAtWkQC2ORY1ELcVK9d2u86wpgaq4SlMPe8CHJHTt9fjeyZC1ouV2U8IUdxxRdaBpPsj75uQ6fPllM8oLXr2ZQUF0sKqBTs5c4KxGihMtnSoDr3I87rtVVIpe900GtDvTDznSkuMDOQfMAkTBYqujF7-5oPfwr-ka-l7lAfR8KtBhFbBzfZrmpQvFIdN1leD-ecll-yIrTtSeNxRHp15Cubbhn3yr7lexaeoZyIel-qeIZKWtugaxkm6ZQoogCnKEL35F~vRJ6CLG~r4r-zGZhb81bHEpUsWNLjdFTryuxicWJNXTCGPc5bfnKgcdCoaE4dig__)",
+            backgroundImage: `url(${contactUs})`,
           }}
           loading="lazy"
         >
@@ -91,10 +92,10 @@ const ContactUs = () => {
             }}
           ></div>
           <div className="relative z-10 p-6 lg:p-12 text-white">
-            <h4 className="text-xl xl:text-[30px] xl:leading-[44px]">
+            <h4 className="text-xl sm:text-2xl lg:text-3xl xl:text-[35px] xl:leading-[50px] font-[dinFontBold]">
               افضل نظام ادارة نقاط البيع
             </h4>
-            <p className="text-sm xl:text-2xl xl:leading-[44px]">
+            <p className="text-base sm:text-lg lg:text-xl xl:text-2xl">
               احصل على نسختك الآن واستفد من الخدمات المتميزة التي يقدمها
               Skilltax في إدارة مطعمك .
             </p>

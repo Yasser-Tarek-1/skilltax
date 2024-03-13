@@ -2,7 +2,15 @@ import { useEffect } from "react";
 import ContactUs from "../components/Home/Sections/ContactUs";
 import PackagesTable from "../components/Packages/PackagesTable";
 import PackagesTableSmallScreen from "../components/Packages/PackagesTableSmallScreen";
-import HelmetSeo from "../components/Seo/HelmetSeo";
+import HelmetSEO from "../components/SEO/HelmetSEO";
+
+const SEO = {
+  title: "SkillTax - باقات سكيل تاكس",
+  description:
+    "باقات سكيل تاكس مناسبة لجميع انواع الاعمال من اول اصحاب المشاريع الناشئة حتي اصحاب الشركات",
+  keywords:
+    "باقات سكيل تاكس, اسعار سكيل تاكس, خدمة كاشير, باقة نمو, باقة بيسك, باقة بريميوم",
+};
 
 const Packages = () => {
   useEffect(() => {
@@ -10,11 +18,11 @@ const Packages = () => {
   }, []);
   return (
     <>
-      <HelmetSeo title={"SkillTax - باقات سكيل تاكس"} />
-      <div className="w-full h-full pt-40">
+      <HelmetSEO {...SEO} />
+      <div className="w-full h-full pt-32 lg:pt-40">
         <div className="container mx-auto px-4">
           <div className="w-full mb-10 lg:mb-16 flex justify-center">
-            <h1 className="text-xl sm:text-2xl lg:text-[35px] lg:leading-[50px] font-[dinFontBold]">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-[35px] xl:leading-[50px] font-[dinFontBold]">
               أسعار الباقات
             </h1>
           </div>

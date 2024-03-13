@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import Button from "../components/Layouts/Button";
-import HelmetSeo from "../components/Seo/HelmetSeo";
+import HelmetSEO from "../components/SEO/HelmetSEO";
+
+const SEO = {
+  title: "SkillTax - Page Not Found",
+};
 
 const ErrorPage = () => {
   return (
     <>
-      <HelmetSeo title={"SkillTax - Page Not Found"} />
+      <HelmetSEO {...SEO} />
       <div className="w-full h-full absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] flex items-center justify-center">
         <div className="flex flex-col items-center">
           <h1 className=" text-7xl sm:text-[120px] font-extrabold text-primary">

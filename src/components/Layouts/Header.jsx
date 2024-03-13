@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
-import { logo, logo_primary } from "../../assets";
-import Links from "./Links";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Links from "./Links";
+import { logo, logo_primary } from "../../assets";
 
 const Header = ({ onOpenSideHandler }) => {
   const { pathname } = useLocation();
@@ -20,7 +20,7 @@ const Header = ({ onOpenSideHandler }) => {
                     : logo_primary
                 }
                 alt="SkillTax - سكيل تاكس نظام الكاشير الامثل"
-                className="w-[120px] lg:w-[180px]"
+                className="w-[120px] lg:w-[180px] 2xl:w-[220px]"
                 loading="lazy"
               />
             </div>

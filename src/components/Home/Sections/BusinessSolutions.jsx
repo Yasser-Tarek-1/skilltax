@@ -4,15 +4,15 @@ import Button from "../../Layouts/Button";
 
 const BusinessSolutions = () => {
   return (
-    <section id="businessSolutions" className="pt-20 sm:pt-28 2xl:pt-52">
-      <div className="w-full h-full lg:h-96 px-[30px] py-16 lg:py-0 sm:px-12 lg:px-20 bg-primary  gap-10 lg:gap-14  rounded-3xl md:rounded-[100px] relative flex items-center justify-between flex-col-reverse md:flex-row">
+    <section id="businessSolutions" className="pt-20 sm:pt-28 2xl:pt-40">
+      <div className="w-full h-full lg:h-80 px-6 py-12 lg:py-0 sm:px-12 lg:px-20 bg-primary gap-7 lg:gap-14 rounded-3xl relative flex items-center justify-between flex-col-reverse md:flex-row">
         <div>
-          <h3 className="text-white text-[25px] xl:text-[35px]">
+          <h3 className="text-white text-xl sm:text-2xl lg:text-3xl xl:text-[35px] xl:leading-[50px] font-[dinFontBold]">
             حلول سكيل تاكس للأعمال
           </h3>
-          <p className="text-white text-[15px] lg:text-lg xl:text-xl max-w-[510px] pt-4 pb-8">
+          <p className="text-white text-sm sm:text-base lg:text-lg xl:text-xl max-w-[510px] pt-2 pb-6">
             نحن نؤمن بأن تلبية احتياجات عملائنا تتطلب تقديم حلول مخصصة وفقًا
-            لاحتياجاتهم .{" "}
+            لاحتياجاتهم .
           </p>
           <HashLink to="/#contactUs">
             <Button prim={true} width="w-[60%] sm:w-[40%]">
