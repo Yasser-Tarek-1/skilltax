@@ -5,7 +5,7 @@ import Solution from "../components/Home/Sections/Solution";
 import BusinessSolutions from "../components/Home/Sections/BusinessSolutions";
 import MoreSolutions from "../components/Home/Sections/MoreSolutions";
 import ContactUs from "../components/Home/Sections/ContactUs";
-import HelmetSEO from "../components/SEO/HelmetSEO";
+import HelmetSEO from "../HelmetSEO/HelmetSEO";
 import { SECTIONS } from "../content";
 const SEO = {
   title: "SkillTax - سكيل تاكس نظام الكاشير الامثل",

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import ContactUs from "../components/Home/Sections/ContactUs";
 import PackagesTable from "../components/Packages/PackagesTable";
 import PackagesTableSmallScreen from "../components/Packages/PackagesTableSmallScreen";
-import HelmetSEO from "../components/SEO/HelmetSEO";
+import HelmetSEO from "../HelmetSEO/HelmetSEO";
 
 const SEO = {
   title: "SkillTax - باقات سكيل تاكس",

@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { skilltax, logo_primary } from "../../assets";
+import { skilltax, logo_primary } from "../assets";
 
 const HelmetSEO = ({ title, description = "", keywords = "" }) => {
   return (

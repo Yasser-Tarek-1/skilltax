@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "../components/Layouts/Button";
-import HelmetSEO from "../components/SEO/HelmetSEO";
+import HelmetSEO from "../HelmetSEO/HelmetSEO";
 
 const SEO = {
   title: "SkillTax - Page Not Found",

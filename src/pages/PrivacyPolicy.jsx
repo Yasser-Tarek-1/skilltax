@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import DOMPurify from "dompurify";
 import { logo } from "../assets";
 import Screen from "../components/Home/Screen";
-import HelmetSEO from "../components/SEO/HelmetSEO";
+import HelmetSEO from "../HelmetSEO/HelmetSEO";
 
 const SEO = {
   title: "SkillTax - سياسة الخصوصية",
@@ -75,55 +75,121 @@ const PrivacyPolicy = () => {
               </div>
             )}
             {!isLoading && !isError && (
-              <div className="text-white pe-3 ps-9 lg:px-32">
-                <ol start={1} className="list-decimal">
-                  {data.map(({ id, ar_first, second }) => {
-                    return (
-                      <div key={id}>
-                        <li
-                          className="text-lg xl:text-2xl mb-3"
-                          dangerouslySetInnerHTML={{
-                            __html: DOMPurify.sanitize(ar_first),
-                          }}
-                        ></li>
-                        {second.length > 0 && (
-                          <ul className="list-disc text-sm xl:text-lg gap-2 lg:gap-1 flex flex-col ps-2 sm:ps-4">
-                            {second?.map(({ id: id_2, ar_second, third }) => {
-                              return (
-                                <>
-                                  <li
-                                    key={id_2}
-                                    dangerouslySetInnerHTML={{
-                                      __html: DOMPurify.sanitize(ar_second),
-                                    }}
-                                  ></li>
-                                  {third.length > 0 && (
-                                    <ol
-                                      start={1}
-                                      className="list-decimal ps-2 sm:ps-4"
-                                    >
-                                      {third?.map(({ id: id_3, ar_third }) => {
-                                        return (
-                                          <li
-                                            key={id_3}
-                                            dangerouslySetInnerHTML={{
-                                              __html:
-                                                DOMPurify.sanitize(ar_third),
-                                            }}
-                                          ></li>
-                                        );
-                                      })}
-                                    </ol>
-                                  )}
-                                </>
-                              );
-                            })}
-                          </ul>
-                        )}
-                      </div>
-                    );
-                  })}
-                </ol>
+              <div className="flex flex-col">
+                <div dir="ltr" className="text-white pe-3 ps-9 lg:px-32">
+                  <ol start={1} className="list-decimal">
+                    {data.map(({ id, en_first, second }) => {
+                      return (
+                        <div key={id}>
+                          <li
+                            className="text-lg xl:text-2xl mt-3 mb-2"
+                            dangerouslySetInnerHTML={{
+                              __html: DOMPurify.sanitize(en_first),
+                            }}
+                          ></li>
+                          {second.length > 0 && (
+                            <ul className="list-disc text-sm xl:text-lg gap-2 lg:gap-1 flex flex-col ps-2 sm:ps-4">
+                              {second?.map(({ id: id_2, en_second, third }) => {
+                                return (
+                                  <>
+                                    <li
+                                      key={id_2}
+                                      dangerouslySetInnerHTML={{
+                                        __html: DOMPurify.sanitize(en_second),
+                                      }}
+                                    ></li>
+                                    {third.length > 0 && (
+                                      <ol
+                                        start={1}
+                                        className="list-decimal ps-2 sm:ps-4"
+                                      >
+                                        {third?.map(
+                                          ({ id: id_3, en_third }) => {
+                                            return (
+                                              <li
+                                                key={id_3}
+                                                dangerouslySetInnerHTML={{
+                                                  __html:
+                                                    DOMPurify.sanitize(
+                                                      en_third
+                                                    ),
+                                                }}
+                                              ></li>
+                                            );
+                                          }
+                                        )}
+                                      </ol>
+                                    )}
+                                  </>
+                                );
+                              })}
+                            </ul>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </ol>
+                </div>
+                <h3
+                  className="w-full text-center my-6
+                 text-xl xl:text-3xl text-white mx-auto"
+                >
+                  سياسة الخصوصية
+                </h3>
+                <div dir="rtl" className="text-white pe-3 ps-9 lg:px-32">
+                  <ol start={1} className="list-decimal">
+                    {data.map(({ id, ar_first, second }) => {
+                      return (
+                        <div key={id}>
+                          <li
+                            className="text-lg xl:text-2xl mt-3 mb-2"
+                            dangerouslySetInnerHTML={{
+                              __html: DOMPurify.sanitize(ar_first),
+                            }}
+                          ></li>
+                          {second.length > 0 && (
+                            <ul className="list-disc text-sm xl:text-lg gap-2 lg:gap-1 flex flex-col ps-2 sm:ps-4">
+                              {second?.map(({ id: id_2, ar_second, third }) => {
+                                return (
+                                  <>
+                                    <li
+                                      key={id_2}
+                                      dangerouslySetInnerHTML={{
+                                        __html: DOMPurify.sanitize(ar_second),
+                                      }}
+                                    ></li>
+                                    {third.length > 0 && (
+                                      <ol
+                                        start={1}
+                                        className="list-decimal ps-2 sm:ps-4 gap-2 lg:gap-1 "
+                                      >
+                                        {third?.map(
+                                          ({ id: id_3, ar_third }) => {
+                                            return (
+                                              <li
+                                                key={id_3}
+                                                dangerouslySetInnerHTML={{
+                                                  __html:
+                                                    DOMPurify.sanitize(
+                                                      ar_third
+                                                    ),
+                                                }}
+                                              ></li>
+                                            );
+                                          }
+                                        )}
+                                      </ol>
+                                    )}
+                                  </>
+                                );
+                              })}
+                            </ul>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </ol>
+                </div>
               </div>
             )}
             {isError && !isLoading && (
