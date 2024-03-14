@@ -17,12 +17,13 @@
   src: url("./fonts/ArbFONTS-DINNextLTArabic-Bold-2.ttf") format("truetype");
 }
 
-html {
-  scroll-behavior: smooth;
+*,
+html,
+body {
+  scroll-behavior: smooth !important;
 }
 
-body,
-p {
+body {
   font-family: "dinFontRegular" !important;
 }
 

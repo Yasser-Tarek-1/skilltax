@@ -1,6 +1,43 @@
-import { contactUs } from "../../../assets";
+import { contactUs, email } from "../../../assets";
+import * as Yup from "yup";
+import { useFormik } from "formik";
 
 const ContactUs = () => {
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      activity_type: "",
+      phone: "",
+      email: "",
+      company_name: "",
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required("هذا الحقل مطلوب"),
+      activity_type: Yup.string().required("هذا الحقل مطلوب"),
+      phone: Yup.string()
+        .required("هذا الحقل مطلوب")
+        .test(
+          "is-first-number-five",
+          "رقم الهاتف لابد ان يبدأ برقم 5",
+
+          (value) => {
+            if (!value) return false; // Handle empty string case
+            const numStr = value.toString();
+            const firstChar = numStr?.charAt(0);
+            return parseInt(firstChar) === 5;
+          }
+        )
+        .matches(/^[0-9]{9}$/, "يجب أن يتكون الهاتف من 9 أرقام"),
+      email: Yup.string()
+        .email("يجب أن يكون البريد الإلكتروني صالحًا")
+        .required("هذا الحقل مطلوب"),
+      company_name: Yup.string().required("هذا الحقل مطلوب"),
+    }),
+    onSubmit: (values) => {
+      console.log(values);
+    },
+  });
+
   return (
     <section id="contactUs" className="pt-20 sm:pt-28 2xl:pt-40">
       <div className="w-full flex items-center lg:gap-8 flex-col-reverse lg:flex-row">
@@ -10,8 +47,11 @@ const ContactUs = () => {
             تواصل معنا
           </h3>
           {/* Contact Us Form */}
-          <form className="mt-10 flex flex-col gap-9">
-            <div className="flex items-center gap-8 w-full flex-col lg:flex-row">
+          <form
+            onSubmit={formik.handleSubmit}
+            className="mt-10 flex flex-col gap-9"
+          >
+            <div className="flex items-start gap-8 w-full flex-col lg:flex-row">
               <div className="flex items-start flex-col gap-3 w-full">
                 <label className="text-base xl:text-lg" htmlFor="name">
                   الاسم
@@ -19,20 +59,45 @@ const ContactUs = () => {
                 <input
                   id="name"
                   type="text"
-                  className="w-full outline-none border-[1.5] text-sm border-[#ECECEC] rounded-[100px] h-14 lg:h-16 px-4 sm:px-7 lg:px-8"
+                  className={`${
+                    formik.touched.name && formik.errors.name
+                      ? "border-red-600"
+                      : "border-[#ECECEC]"
+                  } w-full outline-none border-[1.5px] text-sm rounded-[100px] h-14 lg:h-15 px-4 sm:px-7 lg:px-8 `}
                   placeholder="اكتب اسمك هنا"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.name}
                 />
+                {formik.touched.name && formik.errors.name && (
+                  <p className="text-sm text-red-600 mt-[-9px]">
+                    {formik.errors.name}
+                  </p>
+                )}
               </div>
               <div className="flex items-start flex-col gap-3 w-full">
-                <label className="text-base xl:text-lg" htmlFor="activity">
+                <label className="text-base xl:text-lg" htmlFor="activity_type">
                   نوع النشاط
                 </label>
                 <input
-                  id="activity"
+                  id="activity_type"
                   type="text"
-                  className="w-full outline-none border-[1.5] text-sm border-[#ECECEC] rounded-[100px] h-14 lg:h-16 px-4 sm:px-7 lg:px-8"
+                  className={`${
+                    formik.touched.activity_type && formik.errors.activity_type
+                      ? "border-red-600"
+                      : "border-[#ECECEC]"
+                  } w-full outline-none border-[1.5px] text-sm rounded-[100px] h-14 lg:h-15 px-4 sm:px-7 lg:px-8 `}
                   placeholder="اكتب نوع النشاط"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.activity_type}
                 />
+                {formik.touched.activity_type &&
+                  formik.errors.activity_type && (
+                    <p className="text-sm text-red-600 mt-[-9px]">
+                      {formik.errors.activity_type}
+                    </p>
+                  )}
               </div>
             </div>
             <div className="flex items-start flex-col gap-3 w-full">
@@ -42,9 +107,21 @@ const ContactUs = () => {
               <input
                 id="phone"
                 type="nubmer"
-                className="w-full outline-none border-[1.5] text-sm border-[#ECECEC] rounded-[100px] h-14 lg:h-16 px-4 sm:px-7 lg:px-8"
+                className={`${
+                  formik.touched.phone && formik.errors.phone
+                    ? "border-red-600"
+                    : "border-[#ECECEC]"
+                } w-full outline-none border-[1.5px] text-sm rounded-[100px] h-14 lg:h-15 px-4 sm:px-7 lg:px-8 `}
                 placeholder="اكتب رقم الهاتف هنا"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.phone}
               />
+              {formik.touched.phone && formik.errors.phone && (
+                <p className="text-sm text-red-600 mt-[-9px]">
+                  {formik.errors.phone}
+                </p>
+              )}
             </div>
             <div className="flex items-start flex-col gap-3 w-full">
               <label className="text-base xl:text-lg" htmlFor="email">
@@ -53,24 +130,48 @@ const ContactUs = () => {
               <input
                 id="email"
                 type="email"
-                className="w-full outline-none border-[1.5] text-sm border-[#ECECEC] rounded-[100px] h-14 lg:h-16 px-4 sm:px-7 lg:px-8"
+                className={`${
+                  formik.touched.email && formik.errors.email
+                    ? "border-red-600"
+                    : "border-[#ECECEC]"
+                } w-full outline-none border-[1.5px] text-sm rounded-[100px] h-14 lg:h-15 px-4 sm:px-7 lg:px-8 `}
                 placeholder="اكتب بريدك الالكتروني هنا"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.email}
               />
+              {formik.touched.email && formik.errors.email && (
+                <p className="text-sm text-red-600 mt-[-9px]">
+                  {formik.errors.email}
+                </p>
+              )}
             </div>
             <div className="flex items-start flex-col gap-3 w-full">
-              <label className="text-base xl:text-lg" htmlFor="company">
+              <label className="text-base xl:text-lg" htmlFor="company_name">
                 أسم النشاط{" "}
               </label>
               <input
-                id="company"
+                id="company_name"
                 type="text"
-                className="w-full outline-none border-[1.5] text-sm border-[#ECECEC] rounded-[100px] h-14 lg:h-16 px-4 sm:px-7 lg:px-8"
+                className={`${
+                  formik.touched.company_name && formik.errors.company_name
+                    ? "border-red-600"
+                    : "border-[#ECECEC]"
+                } w-full outline-none border-[1.5px] text-sm rounded-[100px] h-14 lg:h-15 px-4 sm:px-7 lg:px-8 `}
                 placeholder="اكتب أسم النشاط هنا"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.company_name}
               />
+              {formik.touched.company_name && formik.errors.company_name && (
+                <p className="text-sm text-red-600 mt-[-9px]">
+                  {formik.errors.company_name}
+                </p>
+              )}
             </div>
             <button
-              type="button"
-              className=" bg-primary rounded-[100px] h-14 lg:h-16 w-full lg:w-[50%] text-white"
+              type="submit"
+              className=" bg-primary rounded-[100px] h-14 lg:h-15 w-full lg:w-[50%] text-white"
             >
               ارسال
             </button>
@@ -92,7 +193,7 @@ const ContactUs = () => {
             }}
           ></div>
           <div className="relative z-10 p-6 lg:p-12 text-white">
-            <h4 className="text-xl sm:text-2xl lg:text-3xl xl:text-[35px] xl:leading-[50px] font-[dinFontBold]">
+            <h4 className="text-xl sm:text-2xl lg:text-3xl xl:text-[35px] xl:leading-[50px]">
               افضل نظام ادارة نقاط البيع
             </h4>
             <p className="text-base sm:text-lg lg:text-xl xl:text-2xl">

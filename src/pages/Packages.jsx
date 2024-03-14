@@ -4,7 +4,7 @@ import PackagesTable from "../components/Packages/PackagesTable";
 import PackagesTableSmallScreen from "../components/Packages/PackagesTableSmallScreen";
 import HelmetSEO from "../HelmetSEO/HelmetSEO";
 
-const SEO = {
+const SEO_PACKAGES = {
   title: "SkillTax - باقات سكيل تاكس",
   description:
     "باقات سكيل تاكس مناسبة لجميع انواع الاعمال من اول اصحاب المشاريع الناشئة حتي اصحاب الشركات",
@@ -18,7 +18,7 @@ const Packages = () => {
   }, []);
   return (
     <>
-      <HelmetSEO {...SEO} />
+      <HelmetSEO {...SEO_PACKAGES} />
       <div className="w-full h-full pt-32 lg:pt-40">
         <div className="container mx-auto px-4">
           <div className="w-full mb-10 lg:mb-16 flex justify-center">

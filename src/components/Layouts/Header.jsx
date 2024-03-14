@@ -15,7 +15,7 @@ const Header = ({ onOpenSideHandler }) => {
             <div>
               <img
                 src={
-                  pathname == "/" || pathname == "/privacy-policy"
+                  pathname == "/" || pathname == "/privacies"
                     ? logo
                     : logo_primary
                 }
@@ -31,7 +31,7 @@ const Header = ({ onOpenSideHandler }) => {
               icon={faBars}
               size="xl"
               color={
-                pathname == "/" || pathname == "/privacy-policy"
+                pathname == "/" || pathname == "/privacies"
                   ? "#fff "
                   : "#373873"
               }

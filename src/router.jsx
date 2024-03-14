@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "./Root";
 import Home from "./pages/Home";
 import Packages from "./pages/Packages";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Privacies from "./pages/Privacies";
 import ErrorPage from "./pages/ErrorPage";
 
 export const router = createBrowserRouter([
@@ -20,8 +20,8 @@ export const router = createBrowserRouter([
         element: <Packages />,
       },
       {
-        path: "/privacy-policy",
-        element: <PrivacyPolicy />,
+        path: "/privacies",
+        element: <Privacies />,
       },
     ],
   },

@@ -8,7 +8,7 @@ const Links = () => {
       <div
         className={`
       ${
-        pathname == "/" || pathname == "/privacy-policy"
+        pathname == "/" || pathname == "/privacies"
           ? "bg-white text-primary lg:text-white"
           : "bg-primary text-white lg:text-black"
       }
@@ -22,12 +22,14 @@ const Links = () => {
           الرئيسية
         </Link>
         <HashLink
+          smooth
           to="/#solution"
           className=" text-sm lg:text-lg xl:text-xl 2xl:text-[22px] px-4 h-12 flex items-center justify-center"
         >
           حلول سكيل تاكس
         </HashLink>
         <HashLink
+          smooth
           to="/#businessSolutions"
           className="text-sm lg:text-lg xl:text-xl 2xl:text-[22px] px-4 h-12 flex items-center justify-center"
         >
@@ -40,16 +42,20 @@ const Links = () => {
           الباقات
         </Link>
         <HashLink
+          smooth
           to={`${pathname == "/packages" ? "#contactUs" : "/#contactUs"}`}
           className="text-sm lg:hidden lg:text-lg xl:text-xl 2xl:text-[22px] px-4 h-12 flex items-center justify-center"
         >
           تواصل معنا
         </HashLink>
       </div>
-      <HashLink to="#contactUs">
+      <HashLink
+        smooth
+        to={pathname == "/packages" ? "#contactUs" : "/#contactUs"}
+      >
         <button
           className={`${
-            pathname == "/" || pathname == "/privacy-policy"
+            pathname == "/" || pathname == "/privacies"
               ? "bg-white text-primary"
               : " bg-primary text-white"
           }

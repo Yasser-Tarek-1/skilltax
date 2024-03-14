@@ -35,17 +35,17 @@ const Footer = () => {
               روابط سريعة
             </h3>
             <div className="flex flex-col gap-3 xl:gap-4 mt-4 lg:mt-6">
-              <HashLink to="/#home">
+              <HashLink smooth to="/#home">
                 <p className="text-base xl:text-xl 2xl:text-xl text-[#FFFFFF99]">
                   الرئيسية
                 </p>
               </HashLink>
-              <HashLink to="/#solution">
+              <HashLink smooth to="/#solution">
                 <p className="text-base xl:text-xl 2xl:text-xl text-[#FFFFFF99]">
                   حلول سكيل تاكس
                 </p>
               </HashLink>
-              <HashLink to="/#businessSolutions">
+              <HashLink smooth to="/#businessSolutions">
                 <p className="text-base xl:text-xl 2xl:text-xl text-[#FFFFFF99]">
                   حلول خاصة لاعمالك
                 </p>
@@ -68,7 +68,7 @@ const Footer = () => {
                   الأسئلة الشائعة
                 </p>
               </Link>
-              <HashLink to="/privacy-policy#policy">
+              <HashLink smooth to="/privacies#policy">
                 <p className="text-base xl:text-xl 2xl:text-xl text-[#FFFFFF99]">
                   سياسة الخصوصية
                 </p>

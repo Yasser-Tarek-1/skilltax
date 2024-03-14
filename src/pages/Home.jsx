@@ -7,7 +7,7 @@ import MoreSolutions from "../components/Home/Sections/MoreSolutions";
 import ContactUs from "../components/Home/Sections/ContactUs";
 import HelmetSEO from "../HelmetSEO/HelmetSEO";
 import { SECTIONS } from "../content";
-const SEO = {
+const SEO_HOME = {
   title: "SkillTax - سكيل تاكس نظام الكاشير الامثل",
   description:
     "تسهيل وتنظيم عملية إدارة وتنظيم المطاعم و المبيعات بطريقة فعّالة وبسيطة. يتيح هذا النظام  إدارة جميع جوانب المطعم بكل يسر وسهولة.",
@@ -17,7 +17,7 @@ const SEO = {
 const Home = () => {
   return (
     <>
-      <HelmetSEO {...SEO} />
+      <HelmetSEO {...SEO_HOME} />
       <div className="w-full">
         <div
           id="home"
