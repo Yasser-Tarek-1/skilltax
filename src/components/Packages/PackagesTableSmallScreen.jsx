@@ -145,15 +145,13 @@ const PackagesTableSmallScreen = () => {
                   </div>
                   {/* button */}
                   <div className="row border-t-[1.5px] border-[#E8E8E8] h-24 flex items-center  justify-around flex-col">
-                    <Button width="w-[50%] max-w-[280px] overflow-hidden">
-                      <a
-                        target="_blank"
-                        className="w-full h-full flex items-center justify-center"
-                        href="https://wa.me/+966553559038"
-                      >
-                        اطلب الان
-                      </a>
-                    </Button>
+                    <a
+                      target="_blank"
+                      className="w-fit h-fit flex items-center justify-center"
+                      href="https://wa.me/+966553559038"
+                    >
+                      <Button isMain={true}>اطلب الان</Button>
+                    </a>
                   </div>
                 </div>
               </div>

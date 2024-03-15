@@ -22,7 +22,7 @@ const SolutionImg = ({ img, title }) => {
         <SkeletonLoader className="w-full h-[210px] 2xl:h-[310px] rounded-[40px]" />
       ) : (
         <div
-          className="flex items-end w-full h-[210px] sm:h-40 md:h-44 xl:h-[310px] rounded-[40px] relative overflow-hidden bg-cover"
+          className="flex items-end w-full h-[210px] sm:h-40 md:h-44 xl:h-[310px] rounded-[40px] relative overflow-hidden bg-cover bg-center"
           style={backgroundImageStyle}
         >
           <div

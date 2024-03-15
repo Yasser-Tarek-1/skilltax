@@ -1,10 +1,22 @@
-const Button = ({ width, children, onClick, prim }) => {
+const Button = ({
+  type = "button",
+  className = "",
+  children,
+  isMain,
+  custom,
+}) => {
   return (
     <button
-      onClick={onClick}
-      className={`${width ? width : "w-32 xl:w-44"} ${
-        prim ? "text-primary bg-white " : "bg-primary text-white"
-      } h-12 xl:h-16 rounded-full text-xs sm:text-sm xl:text-base font-[dinFontMedium]`}
+      type={type}
+      className={`${
+        isMain
+          ? " bg-primary text-white"
+          : custom
+          ? custom
+          : "bg-white text-primary"
+      } ${
+        className ? className : "w-32 sm:w-44"
+      }  h-12 sm:h-14 rounded-[100px] flex items-center justify-center text-xs sm:text-sm xl:text-base  font-[dinFontMedium]`}
     >
       {children}
     </button>

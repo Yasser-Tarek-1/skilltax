@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import Button from "./Button";
 
 const Links = () => {
   let { pathname } = useLocation();
@@ -52,18 +53,11 @@ const Links = () => {
       <HashLink
         smooth
         to={pathname == "/packages" ? "#contactUs" : "/#contactUs"}
+        className="hidden lg:block"
       >
-        <button
-          className={`${
-            pathname == "/" || pathname == "/privacies"
-              ? "bg-white text-primary"
-              : " bg-primary text-white"
-          }
-        hidden lg:flex items-center justify-center lg:w-40 lg:h-12 xl:w-[188px] xl:h-[60px] rounded-full font-medium text-base 
-        `}
-        >
+        <Button isMain={!(pathname == "/" || pathname == "/privacies")}>
           تواصل معنا
-        </button>
+        </Button>
       </HashLink>
     </>
   );

@@ -1,12 +1,14 @@
 import { contactUs, email } from "../../../assets";
 import * as Yup from "yup";
 import { useFormik } from "formik";
+import Button from "../../Layouts/Button";
 
 const ContactUs = () => {
   const formik = useFormik({
     initialValues: {
       name: "",
       activity_type: "",
+      city_name: "",
       phone: "",
       email: "",
       company_name: "",
@@ -14,6 +16,7 @@ const ContactUs = () => {
     validationSchema: Yup.object({
       name: Yup.string().required("هذا الحقل مطلوب"),
       activity_type: Yup.string().required("هذا الحقل مطلوب"),
+      city_name: Yup.string().required("هذا الحقل مطلوب"),
       phone: Yup.string()
         .required("هذا الحقل مطلوب")
         .test(
@@ -42,7 +45,7 @@ const ContactUs = () => {
     <section id="contactUs" className="pt-20 sm:pt-28 2xl:pt-40">
       <div className="w-full flex items-center lg:gap-8 flex-col-reverse lg:flex-row">
         {/* Right Card */}
-        <div className="w-full h-[830px] bg-[#F8F8F8] p-6 lg:p-10 border-[3px] border-[#EEEEEEEE] rounded-[40px]">
+        <div className="w-full h-full lg:h-[830px] bg-[#F8F8F8] p-6 lg:p-10 border-[3px] border-[#EEEEEEEE] rounded-[40px]">
           <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-[35px] xl:leading-[50px] font-[dinFontBold]">
             تواصل معنا
           </h3>
@@ -100,28 +103,53 @@ const ContactUs = () => {
                   )}
               </div>
             </div>
-            <div className="flex items-start flex-col gap-3 w-full">
-              <label className="text-base xl:text-lg" htmlFor="phone">
-                رقم الهاتف
-              </label>
-              <input
-                id="phone"
-                type="nubmer"
-                className={`${
-                  formik.touched.phone && formik.errors.phone
-                    ? "border-red-600"
-                    : "border-[#ECECEC]"
-                } w-full outline-none border-[1.5px] text-sm rounded-[100px] h-14 lg:h-15 px-4 sm:px-7 lg:px-8 `}
-                placeholder="اكتب رقم الهاتف هنا"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.phone}
-              />
-              {formik.touched.phone && formik.errors.phone && (
-                <p className="text-sm text-red-600 mt-[-9px]">
-                  {formik.errors.phone}
-                </p>
-              )}
+            <div className="flex items-start gap-8 w-full flex-col lg:flex-row">
+              <div className="flex items-start flex-col gap-3 w-full">
+                <label className="text-base xl:text-lg" htmlFor="phone">
+                  رقم الهاتف
+                </label>
+                <input
+                  id="phone"
+                  type="nubmer"
+                  className={`${
+                    formik.touched.phone && formik.errors.phone
+                      ? "border-red-600"
+                      : "border-[#ECECEC]"
+                  } w-full outline-none border-[1.5px] text-sm rounded-[100px] h-14 lg:h-15 px-4 sm:px-7 lg:px-8 `}
+                  placeholder="اكتب رقم الهاتف هنا"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.phone}
+                />
+                {formik.touched.phone && formik.errors.phone && (
+                  <p className="text-sm text-red-600 mt-[-9px]">
+                    {formik.errors.phone}
+                  </p>
+                )}
+              </div>
+              <div className="flex items-start flex-col gap-3 w-full">
+                <label className="text-base xl:text-lg" htmlFor="city_name">
+                  المدينة
+                </label>
+                <input
+                  id="city_name"
+                  type="text"
+                  className={`${
+                    formik.touched.city_name && formik.errors.city_name
+                      ? "border-red-600"
+                      : "border-[#ECECEC]"
+                  } w-full outline-none border-[1.5px] text-sm rounded-[100px] h-14 lg:h-15 px-4 sm:px-7 lg:px-8 `}
+                  placeholder="اكتب اسم المدينة"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.city_name}
+                />
+                {formik.touched.city_name && formik.errors.city_name && (
+                  <p className="text-sm text-red-600 mt-[-9px]">
+                    {formik.errors.city_name}
+                  </p>
+                )}
+              </div>
             </div>
             <div className="flex items-start flex-col gap-3 w-full">
               <label className="text-base xl:text-lg" htmlFor="email">
@@ -169,17 +197,15 @@ const ContactUs = () => {
                 </p>
               )}
             </div>
-            <button
-              type="submit"
-              className=" bg-primary rounded-[100px] h-14 lg:h-15 w-full lg:w-[50%] text-white"
-            >
+
+            <Button className="w-full lg:w-[50%]" type="submit" isMain={true}>
               ارسال
-            </button>
+            </Button>
           </form>
         </div>
         {/* Left Card */}
         <div
-          className="w-full lg:h-[830px] pb-16 lg:pb-0 flex items-end rounded-[40px] relative bottom-[-64px] z-[-1] lg:bottom-0 overflow-hidden bg-cover"
+          className="w-full lg:h-[830px] pb-16 lg:pb-0 flex items-end rounded-[40px] relative bottom-[-64px] z-[-1] lg:bottom-0 overflow-hidden bg-cover bg-center"
           style={{
             backgroundImage: `url(${contactUs})`,
           }}

@@ -50,11 +50,11 @@ const Footer = () => {
                   حلول خاصة لاعمالك
                 </p>
               </HashLink>
-              <Link to="/packages">
+              <HashLink to="/packages#prices">
                 <p className="text-base xl:text-xl 2xl:text-xl text-[#FFFFFF99]">
                   الأسعار
                 </p>
-              </Link>
+              </HashLink>
             </div>
           </div>
           {/* Col-3 */}

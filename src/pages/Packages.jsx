@@ -13,13 +13,10 @@ const SEO_PACKAGES = {
 };
 
 const Packages = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <>
       <HelmetSEO {...SEO_PACKAGES} />
-      <div className="w-full h-full pt-32 lg:pt-40">
+      <div id="prices" className="w-full h-full pt-32 lg:pt-40">
         <div className="container mx-auto px-4">
           <div className="w-full mb-10 lg:mb-16 flex justify-center">
             <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-[35px] xl:leading-[50px] font-[dinFontBold]">

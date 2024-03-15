@@ -15,6 +15,7 @@ const Root = () => {
   const [isLoading, setIsLoding] = useState(true);
   const [showOffLineAlert, setShowOffLineAlert] = useState(false);
 
+  // check the user online or not
   useEffect(() => {
     if (!isOnline) {
       setShowOffLineAlert(true);
@@ -23,6 +24,7 @@ const Root = () => {
     }
   }, [isOnline]);
 
+  // sidebar in small screens
   const closeSideHandler = () => {
     if (isOpen) {
       setIsOpen(false);
@@ -32,10 +34,11 @@ const Root = () => {
     setIsOpen(true);
   };
 
+  // loading animation
   useEffect(() => {
     let clear = setTimeout(() => {
       setIsLoding(false);
-    }, 2000);
+    }, 1700);
     return () => {
       clearTimeout(clear);
     };
@@ -46,7 +49,7 @@ const Root = () => {
       onClick={closeSideHandler}
       className="w-full h-full relative overflow-hidden"
     >
-      {/* {isLoading && <Loading />} */}
+      {isLoading && <Loading />}
       <OffLineAlert
         showOffLineAlert={showOffLineAlert}
         onSetShowOffLineAlert={setShowOffLineAlert}

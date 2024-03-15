@@ -1,5 +1,6 @@
 import { home, homeLine } from "../../assets";
 import { HashLink } from "react-router-hash-link";
+import Button from "../Layouts/Button";
 
 const Screen = () => {
   return (
@@ -27,13 +28,9 @@ const Screen = () => {
             </p>
             <div className="flex items-center gap-4">
               <HashLink to="/#contactUs">
-                <button className="w-32 h-12 sm:w-40 sm:h-14 xl:w-[220px] xl:h-[67px] text-xs sm:text-sm lg:text-lg 2xl:text-xl rounded-full flex items-center justify-center bg-white text-primary">
-                  انضم الينا الان
-                </button>
+                <Button> انضم الينا الان</Button>
               </HashLink>
-              <button className="w-32 h-12 sm:w-40 sm:h-14 xl:w-[220px] xl:h-[67px] text-xs sm:text-sm lg:text-lg 2xl:text-xl rounded-full flex items-center justify-center bg-[#FFFFFF1A] text-white">
-                قراءة المزيد
-              </button>
+              <Button custom="bg-[#FFFFFF1A] text-white">قراءة المزيد</Button>
             </div>
           </div>
           <div className="w-[120%] relative left-0 sm:w-full 2xl:scale-110 2xl:top-[-22px]">

@@ -18,7 +18,7 @@ const Tracking = ({ id, title, description, img }) => {
           <p className="mb-6 mt-2 text-secondary text-base sm:text-lg lg:text-xl xl:text-2xl">
             {description}
           </p>
-          <Button>قراءة المزيد</Button>
+          <Button isMain={true}>قراءة المزيد</Button>
         </div>
       </div>
     </section>

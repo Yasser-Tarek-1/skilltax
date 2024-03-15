@@ -15,9 +15,7 @@ const BusinessSolutions = () => {
             لاحتياجاتهم .
           </p>
           <HashLink to="/#contactUs">
-            <Button prim={true} width="w-[60%] sm:w-[40%]">
-              تواصل معنا
-            </Button>
+            <Button>تواصل معنا</Button>
           </HashLink>
         </div>
         <div className="w-full md:w-[70%] lg:w-[55%]">
