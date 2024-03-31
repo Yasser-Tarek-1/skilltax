@@ -4,9 +4,11 @@ import Tracking from "../components/Home/Sections/Tracking";
 import Solution from "../components/Home/Sections/Solution";
 import BusinessSolutions from "../components/Home/Sections/BusinessSolutions";
 import MoreSolutions from "../components/Home/Sections/MoreSolutions";
-import ContactUs from "../components/Home/Sections/ContactUs";
+import ContactUs from "../components/Home/Sections/ContactUs/ContactUs";
+import Partners from "../components/Home/Sections/Partners";
 import HelmetSEO from "../HelmetSEO/HelmetSEO";
-import { SECTIONS } from "../content";
+import { SECTIONS } from "../services/content";
+
 const SEO_HOME = {
   title: "SkillTax - سكيل تاكس نظام الكاشير الامثل",
   description:
@@ -34,6 +36,7 @@ const Home = () => {
           <Solution />
           <BusinessSolutions />
           <MoreSolutions />
+          <Partners />
           <ContactUs />
         </div>
       </div>

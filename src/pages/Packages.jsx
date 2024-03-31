@@ -1,7 +1,6 @@
-import { useEffect } from "react";
-import ContactUs from "../components/Home/Sections/ContactUs";
-import PackagesTable from "../components/Packages/PackagesTable";
-import PackagesTableSmallScreen from "../components/Packages/PackagesTableSmallScreen";
+import ContactUs from "../components/Home/Sections/ContactUs/ContactUs";
+import PackagesTable from "../components/PackagesPage/PackagesTable";
+import PackagesTableSmallScreen from "../components/PackagesPage/PackagesTableSmallScreen";
 import HelmetSEO from "../HelmetSEO/HelmetSEO";
 
 const SEO_PACKAGES = {
@@ -19,7 +18,7 @@ const Packages = () => {
       <div id="prices" className="w-full h-full pt-32 lg:pt-40">
         <div className="container mx-auto px-4">
           <div className="w-full mb-10 lg:mb-16 flex justify-center">
-            <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-[35px] xl:leading-[50px] font-[dinFontBold]">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-[dinFontBold]">
               أسعار الباقات
             </h1>
           </div>

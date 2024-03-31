@@ -12,16 +12,6 @@ const HelmetSEO = ({ title, description = "", keywords = "" }) => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={skilltax} />
-      {/* Google tag (gtag.js) */}
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-F3DN9WTGV0"
-      ></script>
-      <script>
-        {` window.dataLayer = window.dataLayer || []; function gtag()
-        {dataLayer.push(arguments)}
-        gtag('js', new Date()); gtag('config', 'G-F3DN9WTGV0');`}
-      </script>
     </Helmet>
   );
 };

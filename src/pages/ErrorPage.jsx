@@ -4,6 +4,7 @@ import HelmetSEO from "../HelmetSEO/HelmetSEO";
 
 const SEO_404 = {
   title: "SkillTax - Page Not Found",
+  description: "هذه الصفحة ليست جزء من موقعنا في الوقت الحالي",
 };
 
 const ErrorPage = () => {
@@ -20,7 +21,7 @@ const ErrorPage = () => {
           </p>
 
           <Link to="/">
-            <Button>الصفحة الرئسية</Button>
+            <Button isMain={true}>الصفحة الرئسية</Button>
           </Link>
         </div>
       </div>

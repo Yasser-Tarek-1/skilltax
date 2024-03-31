@@ -5,16 +5,19 @@
 @font-face {
   font-family: "dinFontRegular";
   src: url("./fonts/ArbFONTS-DINNextLTArabic-Regular-2.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "dinFontMedium";
   src: url("./fonts/ArbFONTS-DINNextLTArabic-Medium-2.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "dinFontBold";
   src: url("./fonts/ArbFONTS-DINNextLTArabic-Bold-2.ttf") format("truetype");
+  font-display: swap;
 }
 
 *,
@@ -141,4 +144,14 @@ h6 {
   to {
     fill: #373873;
   }
+} */
+
+/* .mask {
+  mask-image: linear-gradient(
+    to right,
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 10%,
+    hsl(0 0% 0% / 1) 90%,
+    hsl(0 0% 0% / 0)
+  );
 } */

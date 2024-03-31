@@ -1,8 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Links from "./Links";
 import { logo, logo_primary } from "../../assets";
+import { FaBars } from "react-icons/fa6";
 
 const Header = ({ onOpenSideHandler }) => {
   const { pathname } = useLocation();
@@ -15,23 +14,30 @@ const Header = ({ onOpenSideHandler }) => {
             <div>
               <img
                 src={
-                  pathname == "/" || pathname == "/privacies"
+                  pathname == "/" ||
+                  pathname == "/privacies" ||
+                  pathname == "/faqs"
                     ? logo
                     : logo_primary
                 }
                 alt="SkillTax - سكيل تاكس نظام الكاشير الامثل"
-                className="w-[120px] lg:w-[180px] 2xl:w-[220px]"
+                className="w-[120px] lg:w-[200px] h-full"
                 loading="lazy"
               />
             </div>
           </Link>
           {/* Menu Bar*/}
-          <button onClick={onOpenSideHandler} className="block lg:hidden">
-            <FontAwesomeIcon
-              icon={faBars}
-              size="xl"
+          <button
+            aria-label="Menu Bar"
+            onClick={onOpenSideHandler}
+            className="block lg:hidden"
+          >
+            <FaBars
+              size={26}
               color={
-                pathname == "/" || pathname == "/privacies"
+                pathname == "/" ||
+                pathname == "/privacies" ||
+                pathname == "/faqs"
                   ? "#fff "
                   : "#373873"
               }

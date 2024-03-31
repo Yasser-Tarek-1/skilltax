@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "./Root";
 import Home from "./pages/Home";
+import ErrorPage from "./pages/ErrorPage";
 import Packages from "./pages/Packages";
 import Privacies from "./pages/Privacies";
-import ErrorPage from "./pages/ErrorPage";
+import Faqs from "./pages/Faqs";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: "/privacies",
         element: <Privacies />,
+      },
+      {
+        path: "/faqs",
+        element: <Faqs />,
       },
     ],
   },

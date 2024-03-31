@@ -33,9 +33,9 @@ const SolutionImg = ({ img, title }) => {
             }}
           ></div>
           <div className="relative z-10 p-6 lg:p-9 text-white">
-            <h4 className="text-base sm:text-xl md:text-2xl font-[dinFontBold]">
+            <h3 className="text-lg sm:text-base lg:text-xl font-[dinFontBold]">
               {title}
-            </h4>
+            </h3>
           </div>
         </div>
       )}

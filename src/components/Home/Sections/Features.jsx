@@ -1,5 +1,5 @@
+import { FEATURES } from "../../../services/content";
 import Head from "../../Layouts/Head";
-import { FEATURES } from "../../../content";
 
 const Features = () => {
   return (
@@ -8,8 +8,8 @@ const Features = () => {
         تتميز بالمرونه والقدرة على تلبية كافة إحتياجتك بشكل فعال وفقاً لمتطلباتك
         ، مما يجعل تجربتك معنا متميزة
       </Head>
-      <div className="flex items-start justify-center  sm:justify-between flex-wrap gap-8 sm:gap-12">
-        {FEATURES.map(({ id, icon, h4, p }) => {
+      <div className="flex items-start justify-center sm:justify-between flex-wrap gap-8 sm:gap-12">
+        {FEATURES.map(({ id, icon, title, description }) => {
           return (
             <div
               key={id}
@@ -17,15 +17,15 @@ const Features = () => {
             >
               <img
                 src={icon}
-                alt={h4}
-                className="w-[75px] lg:w-[105px] mb-4"
+                alt={title}
+                className="w-[75px] mb-2 sm:mb-4"
                 loading="lazy"
               />
-              <h4 className="text-lg sm:text-xl xl:text-2xl font-[dinFontMedium]">
-                {h4}
-              </h4>
-              <p className="text-secondary text-center sm:text-start text-sm sm:text-xl xl:text-[22px] xl:leading-[30px] font-[dinFontMedium] max-w-full">
-                {p}
+              <h3 className="text-lg sm:text-base lg:text-xl font-[dinFontMedium]">
+                {title}
+              </h3>
+              <p className="text-secondary text-center sm:text-start text-sm sm:text-base lg:text-lg font-[dinFontMedium] max-w-full">
+                {description}
               </p>
             </div>
           );

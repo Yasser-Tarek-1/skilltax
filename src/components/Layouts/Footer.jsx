@@ -1,123 +1,119 @@
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import {
-  faInstagram,
-  faWhatsapp,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { logo, payments } from "../../assets";
 
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { RiTwitterXLine } from "react-icons/ri";
+
 const Footer = () => {
-  let year = new Date().getFullYear();
   return (
     <div className="w-full bg-primary mt-28 md:mt-52">
       <div className="container">
         {/* Head */}
         <div className="w-full py-16 xl:py-24 flex items-start flex-col sm:flex-row gap-x-24 justify-between gap-y-12 flex-wrap">
           {/* Col-1 */}
-          <div className="flex flex-col items-start gap-4 lg:gap-6 max-w-[500px]">
+          <div className="flex flex-col items-start gap-4 lg:gap-4 max-w-[500px]">
             <img
               src={logo}
               alt="SkillTax - سكيل تاكس نظام الكاشير الامثل"
-              className="w-[180px] xl:w-[220px]"
+              className="w-[180px] h-full"
               loading="lazy"
             />
-            <p className="text-[#FFFFFF99] text-sm sm:text-xl 2xl:text-2xl font-[dinFontRegularc]">
+            <p className="text-[#FFFFFF99] text-sm sm:text-lg xl:text-xl font-[dinFontRegular]">
               نفخر بنظام نقاط البيع الخاص بنا المصمم خصيصًا للمطاعم والكافيهات،
-              حيث ستجد تجربة لا مثيل لها في إدارة عملك وتحسين أدائه.
+              حيث ستجد تجربة لا مثيل لها في إدارة عملك وتحسين الاداء.
             </p>
-            <img src={payments} className="w-[70%] max-w-full" loading="lazy" />
+            <img
+              src={payments}
+              className="w-[60%] h-full max-w-full"
+              loading="lazy"
+              alt="payments"
+            />
           </div>
           {/* Col-2 */}
           <div>
-            <h3 className="text-lg sm:text-xl xl:text-2xl font-[dinFontMedium] text-white">
+            <h3 className="text-lg sm:text-base lg:text-xl font-[dinFontMedium] text-white">
               روابط سريعة
             </h3>
             <div className="flex flex-col gap-3 xl:gap-4 mt-4 lg:mt-6">
               <HashLink smooth to="/#home">
-                <p className="text-base xl:text-xl 2xl:text-xl text-[#FFFFFF99]">
+                <p className="text-base lg:text-lg text-[#FFFFFF99]">
                   الرئيسية
                 </p>
               </HashLink>
               <HashLink smooth to="/#solution">
-                <p className="text-base xl:text-xl 2xl:text-xl text-[#FFFFFF99]">
+                <p className="text-base lg:text-lg text-[#FFFFFF99]">
                   حلول سكيل تاكس
                 </p>
               </HashLink>
               <HashLink smooth to="/#businessSolutions">
-                <p className="text-base xl:text-xl 2xl:text-xl text-[#FFFFFF99]">
+                <p className="text-base lg:text-lg text-[#FFFFFF99]">
                   حلول خاصة لاعمالك
                 </p>
               </HashLink>
               <HashLink to="/packages#prices">
-                <p className="text-base xl:text-xl 2xl:text-xl text-[#FFFFFF99]">
-                  الأسعار
-                </p>
+                <p className="text-base lg:text-lg text-[#FFFFFF99]">الأسعار</p>
               </HashLink>
             </div>
           </div>
           {/* Col-3 */}
           <div>
-            <h3 className="text-lg sm:text-xl xl:text-2xl font-[dinFontMedium] text-white">
+            <h3 className="text-lg sm:text-base lg:text-xl font-[dinFontMedium] text-white">
               روابط عامة
             </h3>
             <div className="flex flex-col gap-3 xl:gap-4 mt-4 lg:mt-6">
-              <Link to="/">
-                <p className="text-base xl:text-xl 2xl:text-xl text-[#FFFFFF99]">
+              <HashLink smooth to="/faqs#faqs">
+                <p className="text-base lg:text-lg text-[#FFFFFF99]">
                   الأسئلة الشائعة
                 </p>
-              </Link>
+              </HashLink>
               <HashLink smooth to="/privacies#policy">
-                <p className="text-base xl:text-xl 2xl:text-xl text-[#FFFFFF99]">
+                <p className="text-base lg:text-lg text-[#FFFFFF99]">
                   سياسة الخصوصية
                 </p>
               </HashLink>
-              <Link to="/">
-                <p className="text-base xl:text-xl 2xl:text-xl text-[#FFFFFF99]">
-                  شروط الاستخدام
-                </p>
-              </Link>
+              {/* <Link> */}
+              <p className="text-base lg:text-lg text-[#FFFFFF99] cursor-pointer">
+                شروط الاستخدام
+              </p>
+              {/* </Link> */}
             </div>
           </div>
           {/* Col-4 */}
           <div>
-            <h3 className="text-lg sm:text-xl xl:text-2xl font-[dinFontMedium] text-white">
+            <h3 className="text-lg sm:text-base lg:text-xl font-[dinFontMedium] text-white">
               التواصل الاجتماعي
             </h3>
             <div className="flex flex-row gap-3 xl:gap-4 mt-4 lg:mt-6">
-              <a href="https://www.instagram.com/skilltax.sa" target="_blank">
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  color="#FFFFFF99"
-                  size={"2xl"}
-                />
+              <a
+                aria-label="Contact us via Instagram"
+                href="https://www.instagram.com/skilltax.sa"
+                target="_blank"
+              >
+                <FaInstagram size={26} color="#FFFFFF99" />
               </a>
               <a
+                aria-label="Contact us via Twitter"
                 href="https://twitter.com/skilltax?s=21&t=mjl-yGP7nqug1de3rxbgWQ"
                 target="_blank"
               >
-                <FontAwesomeIcon
-                  icon={faXTwitter}
-                  color="#FFFFFF99"
-                  size={"2xl"}
-                />
+                <RiTwitterXLine size={26} color="#FFFFFF99" />
               </a>
-              <a href="https://wa.me/+966553559038" target="_blank">
-                <FontAwesomeIcon
-                  icon={faWhatsapp}
-                  color="#FFFFFF99"
-                  size={"2xl"}
-                />
+              <a
+                aria-label="Contact us via WhatsApp"
+                href="https://wa.me/+966553559038"
+                target="_blank"
+              >
+                <FaWhatsapp size={26} color="#FFFFFF99" />
               </a>
             </div>
           </div>
         </div>
       </div>{" "}
       {/* Copy Rights */}
-      <div className="bg-[#32336A] h-10 xl:h-[45px] w-full flex items-center justify-center">
-        <p className="text-white text-sm xl:text-lg">
-          جميع الحقوق محفوظة {year} &#169; SkillTax
+      <div className="bg-[#32336A] h-10 w-full flex items-center justify-center">
+        <p className="text-white text-sm lg:text-base">
+          جميع الحقوق محفوظة {new Date().getFullYear()} &#169; SkillTax
         </p>
       </div>
     </div>
