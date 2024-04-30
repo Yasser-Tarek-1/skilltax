@@ -1,6 +1,6 @@
 import { HashLink } from "react-router-hash-link";
 
-import { logo, payments } from "../../assets";
+import { logo, payments, zakat } from "../../assets";
 
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
@@ -10,7 +10,7 @@ const Footer = () => {
     <div className="w-full bg-primary mt-28 md:mt-52">
       <div className="container">
         {/* Head */}
-        <div className="w-full py-16 xl:py-24 flex items-start flex-col sm:flex-row gap-x-24 justify-between gap-y-12 flex-wrap">
+        <div className="w-full py-16 xl:py-24 flex items-start flex-col sm:flex-row gap-x-6 justify-between gap-y-12 flex-wrap">
           {/* Col-1 */}
           <div className="flex flex-col items-start gap-4 lg:gap-4 max-w-[500px]">
             <img
@@ -23,15 +23,18 @@ const Footer = () => {
               نفخر بنظام نقاط البيع الخاص بنا المصمم خصيصًا للمطاعم والكافيهات،
               حيث ستجد تجربة لا مثيل لها في إدارة عملك وتحسين الاداء.
             </p>
-            <img
-              src={payments}
-              className="w-[60%] h-full max-w-full"
-              loading="lazy"
-              alt="payments"
-            />
+            <div className="flex items-center justify-center flex-col">
+              <p className="text-base lg:text-lg text-[#FFFFFF99]">متوافق مع</p>
+              <img
+                src={zakat}
+                className="w-[70%] sm:w-[60%] h-full max-w-full"
+                loading="lazy"
+                alt="zakat"
+              />
+            </div>
           </div>
           {/* Col-2 */}
-          <div>
+          <div className="w-[200px]">
             <h3 className="text-lg sm:text-base lg:text-xl font-[dinFontMedium] text-white">
               روابط سريعة
             </h3>
@@ -57,7 +60,7 @@ const Footer = () => {
             </div>
           </div>
           {/* Col-3 */}
-          <div>
+          <div className="w-[200px]">
             <h3 className="text-lg sm:text-base lg:text-xl font-[dinFontMedium] text-white">
               روابط عامة
             </h3>
@@ -80,7 +83,7 @@ const Footer = () => {
             </div>
           </div>
           {/* Col-4 */}
-          <div>
+          <div className="max-w-[60%] sm:max-w-[200px]">
             <h3 className="text-lg sm:text-base lg:text-xl font-[dinFontMedium] text-white">
               التواصل الاجتماعي
             </h3>
@@ -107,6 +110,12 @@ const Footer = () => {
                 <FaWhatsapp size={26} color="#FFFFFF99" />
               </a>
             </div>
+            <img
+              src={payments}
+              className="w-full h-full max-w-full mt-2 lg:mt-3"
+              loading="lazy"
+              alt="payments"
+            />
           </div>
         </div>
       </div>{" "}

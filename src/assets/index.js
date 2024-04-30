@@ -28,10 +28,10 @@ import qrCode from "./qrCode.svg";
 // Contact Us Section
 import contactUs from "./contactUs.jpeg";
 // og:Image
-import skilltax from "./skilltax.jpeg";
 import S_logo from "./S_logo.svg";
 // footer
 import payments from "./payments.webp";
+import zakat from "./zakat.png";
 // partners
 import secret_coffee from "./partners/secret_coffee.webp";
 import een from "./partners/een.webp";
@@ -45,6 +45,7 @@ import heisenberg from "./partners/heisenberg.webp";
 import tulua from "./partners/tulua.webp";
 import nubrij from "./partners/nubrij.webp";
 import lounge from "./partners/lounge.webp";
+import blue_box from "./partners/blue_box.png";
 // Message
 import messageSuccess from "./messageSuccess.svg";
 import messageError from "./messageError.svg";
@@ -69,7 +70,6 @@ export {
   from_cars,
   for_your_work,
   food_trucks,
-  skilltax,
   contactUs,
   inventory,
   kitchen_system,
@@ -86,6 +86,8 @@ export {
   tulua,
   nubrij,
   lounge,
+  blue_box,
   messageSuccess,
   messageError,
+  zakat,
 };

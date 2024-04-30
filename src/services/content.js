@@ -26,6 +26,7 @@ import {
   tulua,
   nubrij,
   lounge,
+  blue_box,
 } from "../assets";
 
 export const SECTIONS = [
@@ -160,5 +161,10 @@ export const PARTNERS_MARQUEE = [
     id: 12,
     img: lounge,
     title: "Lounge S5",
+  },
+  {
+    id: 13,
+    img: blue_box,
+    title: "Blue Box",
   },
 ];
